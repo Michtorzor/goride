@@ -1,0 +1,1141 @@
+:root {
+    --navy: #092d49;
+    --navy-light: #173b57;
+    --green: #00b978;
+    --green-bright: #00d98b;
+    --footer: #062f47;
+    --text: #263b4a;
+    --muted: #687b89;
+    --background: #f5f9fb;
+    --white: #ffffff;
+    --border: #dce6ec;
+    --shadow: 0 8px 28px rgba(9, 45, 73, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: var(--text);
+    background: var(--background);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(0, 185, 120, 0.3);
+    outline-offset: 3px;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+}
+
+
+/* =========================================================
+   2. HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 3px 15px rgba(9, 45, 73, 0.07);
+}
+
+.header-container {
+    width: min(1200px, calc(100% - 40px));
+    min-height: 75px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+/* GoRide logo */
+
+.logo {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* Desktop navigation */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+}
+
+.navbar a {
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.navbar a:hover {
+    color: var(--green);
+}
+
+/* Register and login buttons */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.register-btn,
+.login-btn {
+    min-height: 38px;
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.register-btn {
+    color: var(--white);
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.register-btn:hover {
+    color: var(--white);
+    background: #009d66;
+    border-color: #009d66;
+}
+
+.login-btn {
+    color: var(--navy);
+    background: var(--white);
+    border-color: var(--navy);
+}
+
+.login-btn:hover {
+    color: var(--white);
+    background: var(--navy);
+}
+
+
+/* Back Button */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+    background-color: #092d49;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid #092d49;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #00b978;
+    border-color: #00b978;
+    color: #ffffff;
+}
+
+/* Keep header buttons aligned */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Mobile menu button */
+
+.menu-btn {
+    width: 42px;
+    height: 42px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   3. MAIN PAGE
+========================================================= */
+
+.fare-page {
+    width: 100%;
+    flex: 1;
+    padding: 55px 20px 75px;
+    background: var(--background);
+}
+
+/* Introductory heading */
+
+.fare-intro {
+    width: min(100%, 760px);
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 13px;
+    padding: 6px 14px;
+    display: inline-block;
+    color: var(--green);
+    background: rgba(0, 185, 120, 0.09);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.fare-intro h1 {
+    margin-bottom: 14px;
+    color: var(--navy);
+    font-size: clamp(28px, 3.5vw, 38px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+}
+
+.fare-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   4. CALCULATOR LAYOUT
+========================================================= */
+
+.fare-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: start;
+    gap: 28px;
+}
+
+/* Form and results cards */
+
+.fare-form-card,
+.fare-result-card {
+    min-width: 0;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid #e5edf1;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.fare-form-card h2,
+.fare-result-card h2 {
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.fare-form-card h2 {
+    margin-bottom: 6px;
+}
+
+.form-description {
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   5. FORM FIELDS
+========================================================= */
+
+#fareForm {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 20px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Pickup, drop-off, weight and package select */
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    min-height: 47px;
+    padding: 11px 13px;
+    display: block;
+    color: var(--navy);
+    background: #fbfdfe;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #92a1ab;
+    opacity: 1;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--green);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(0, 185, 120, 0.1);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   6. DELIVERY OPTIONS
+========================================================= */
+
+.delivery-options {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 9px;
+}
+
+.delivery-option {
+    min-width: 0;
+    min-height: 76px;
+    padding: 13px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fbfdfe;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.delivery-option:hover {
+    border-color: var(--green);
+}
+
+.delivery-option:has(input:checked) {
+    background: #effbf6;
+    border-color: var(--green);
+}
+
+.delivery-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    margin-top: 4px;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+.delivery-option div {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.delivery-option strong {
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.delivery-option span {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   7. CALCULATE BUTTON
+========================================================= */
+
+.calculate-btn {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 5px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--white);
+    background: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.calculate-btn i {
+    font-size: 16px;
+}
+
+.calculate-btn:hover {
+    color: var(--white);
+    background: #009d66;
+    border-color: #009d66;
+    transform: translateY(-1px);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   8. FARE RESULT CARD
+========================================================= */
+
+.fare-result-card {
+    padding: 30px;
+}
+
+/* Naira icon */
+
+.result-icon {
+    width: 49px;
+    height: 49px;
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    background: rgba(0, 185, 120, 0.1);
+    border-radius: 9px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.fare-result-card h2 {
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+
+.result-description {
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Fare breakdown container */
+
+.fare-result {
+    width: 100%;
+    padding: 8px 17px;
+    background: #f8fbfd;
+    border: 1px solid #e7eef2;
+    border-radius: 7px;
+}
+
+/* Individual fare rows */
+
+.fare-row {
+    min-height: 47px;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid #e5edf1;
+}
+
+.fare-row span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.fare-row strong {
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Divider above the total */
+
+.fare-divider {
+    width: 100%;
+    height: 1px;
+    margin: 4px 0;
+    background: var(--border);
+}
+
+/* Estimated total row */
+
+.fare-total {
+    min-height: 65px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.fare-total span {
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.fare-total strong {
+    color: var(--green);
+    font-size: clamp(20px, 2.2vw, 27px);
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: right;
+    overflow-wrap: anywhere;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   9. SEND PACKAGE BUTTON
+========================================================= */
+
+.send-package-btn {
+    width: 100%;
+    min-height: 47px;
+    margin-top: 20px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--white);
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.send-package-btn:hover {
+    color: var(--white);
+    background: var(--navy-light);
+    border-color: var(--navy-light);
+}
+
+.send-package-btn i {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.send-package-btn:hover i {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   10. FARE DISCLAIMER
+========================================================= */
+
+.fare-note {
+    margin-top: 18px;
+    padding: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: #775a16;
+    background: #fff8e6;
+    border: 1px solid #f2e3b5;
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.fare-note i {
+    flex-shrink: 0;
+    margin-top: 4px;
+    color: #b28a28;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   11. JAVASCRIPT FEEDBACK MESSAGES
+========================================================= */
+
+.form-message {
+    margin-top: 12px;
+    padding: 11px 13px;
+    border-radius: 5px;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.form-message[hidden] {
+    display: none !important;
+}
+
+.error-message {
+    color: #a52626;
+    background: #fff0f0;
+    border: 1px solid #f2cccc;
+}
+
+.success-message {
+    color: #08734e;
+    background: #eafaf3;
+    border: 1px solid #b9ead5;
+}
+
+
+/* =========================================================
+   12. FOOTER
+========================================================= */
+
+.site-footer {
+    width: 100%;
+    margin-top: auto;
+    color: #c0d0da;
+    background: var(--footer);
+}
+
+.footer-container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 45px 0 36px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.footer-column {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-column h3 {
+    margin-bottom: 5px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.footer-column a {
+    color: #c0d0da;
+    font-size: 14px;
+    line-height: 1.8;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--green-bright);
+}
+
+/* Full-screen-width divider */
+
+.footer-bottom {
+    width: 100%;
+    min-height: 65px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #c0d0da;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   13. TABLET NAVIGATION
+========================================================= */
+
+@media (max-width: 1050px) {
+    .header-container {
+        gap: 14px;
+    }
+
+    .logo img {
+        width: 160px;
+        height: 65px;
+    }
+
+    .navbar {
+        gap: 14px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .header-actions {
+        gap: 7px;
+    }
+
+    .register-btn,
+    .login-btn {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+    .fare-container {
+        gap: 20px;
+    }
+
+    .fare-form-card,
+    .fare-result-card {
+        padding: 24px;
+    }
+}
+
+
+/* =========================================================
+   14. MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 820px) {
+    .header-container {
+        min-height: 70px;
+    }
+
+    .logo img {
+        width: 165px;
+        height: 62px;
+    }
+
+    .menu-btn {
+        display: inline-flex;
+        flex-shrink: 0;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 14px 20px 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 10px 18px rgba(9, 45, 73, 0.1);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 11px 5px;
+        color: var(--navy);
+        font-size: 13px;
+        white-space: normal;
+        border-bottom: 1px solid #edf2f5;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+    .fare-page {
+        padding: 42px 20px 55px;
+    }
+
+    .fare-intro {
+        margin-bottom: 30px;
+    }
+
+    .fare-intro h1 {
+        font-size: 30px;
+    }
+
+    .fare-container {
+        max-width: 650px;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .fare-form-card,
+    .fare-result-card {
+        padding: 28px;
+    }
+
+    .fare-result-card h2 {
+        font-size: 21px;
+    }
+
+    .fare-total strong {
+        font-size: 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+}
+
+
+/* =========================================================
+   15. SMALL MOBILE SCREENS
+========================================================= */
+
+@media (max-width: 520px) {
+    .header-container {
+        width: calc(100% - 30px);
+        min-height: 65px;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 130px;
+        height: 56px;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
+
+    .register-btn,
+    .login-btn {
+        min-height: 34px;
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .menu-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .fare-page {
+        padding: 34px 15px 42px;
+    }
+
+    .section-label {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .fare-intro {
+        margin-bottom: 24px;
+    }
+
+    .fare-intro h1 {
+        margin-bottom: 11px;
+        font-size: 26px;
+        letter-spacing: -0.3px;
+    }
+
+    .fare-intro p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .fare-container {
+        gap: 20px;
+    }
+
+    .fare-form-card,
+    .fare-result-card {
+        padding: 21px 16px;
+        border-radius: 8px;
+    }
+
+    .fare-form-card h2,
+    .fare-result-card h2 {
+        font-size: 18px;
+    }
+
+    .form-description {
+        margin-bottom: 21px;
+        font-size: 11px;
+    }
+
+    .form-group {
+        margin-bottom: 17px;
+    }
+
+    .form-group > label {
+        font-size: 12px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group select {
+        min-height: 44px;
+        padding: 10px 11px;
+        font-size: 12px;
+    }
+
+    .delivery-options {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .delivery-option {
+        min-height: 65px;
+        padding: 11px;
+    }
+
+    .delivery-option strong {
+        font-size: 12px;
+    }
+
+    .delivery-option span {
+        font-size: 11px;
+    }
+
+    .calculate-btn {
+        min-height: 46px;
+        font-size: 12px;
+    }
+
+    .result-icon {
+        width: 43px;
+        height: 43px;
+        margin-bottom: 13px;
+        font-size: 24px;
+    }
+
+    .result-description {
+        font-size: 11px;
+    }
+
+    .fare-result {
+        padding: 7px 12px;
+    }
+
+    .fare-row {
+        min-height: 43px;
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .fare-row span,
+    .fare-row strong {
+        font-size: 11px;
+    }
+
+    .fare-total {
+        min-height: 58px;
+        gap: 8px;
+    }
+
+    .fare-total span {
+        font-size: 11px;
+    }
+
+    .fare-total strong {
+        font-size: 20px;
+    }
+
+    .send-package-btn {
+        min-height: 45px;
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .fare-note {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .footer-container {
+        width: calc(100% - 32px);
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 0 27px;
+    }
+
+    .footer-column {
+        gap: 8px;
+    }
+
+    .footer-column h3 {
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        min-height: 58px;
+        padding: 14px 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   16. VERY NARROW SCREENS
+========================================================= */
+
+@media (max-width: 360px) {
+    .header-container {
+        width: calc(100% - 20px);
+        gap: 6px;
+    }
+
+    .logo img {
+        width: 105px;
+    }
+
+    .register-btn,
+    .login-btn {
+        padding: 6px 7px;
+        font-size: 9px;
+    }
+
+    .menu-btn {
+        width: 32px;
+        height: 34px;
+    }
+
+    .fare-intro h1 {
+        font-size: 23px;
+    }
+
+    .fare-form-card,
+    .fare-result-card {
+        padding: 17px 12px;
+    }
+
+    .fare-result {
+        padding: 6px 9px;
+    }
+
+    .fare-total strong {
+        font-size: 18px;
+    }
+}

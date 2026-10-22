@@ -1,0 +1,892 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Manage your GoRide customer account, review delivery history and contact customer support.">
+
+    <title>GoRide | Customer Support & Account Services</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Customer Support CSS -->
+    <link rel="stylesheet" href="../css/customer-support.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="../index.html" class="logo" aria-label="GoRide Home">
+                <img src="../assets/logo.jpeg" alt="GoRide Logo">
+            </a>
+
+            <button class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="navbar"
+                    aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="#help-center">Help Center</a>
+                <a href="#contact-support">Contact Support</a>
+
+                <div class="nav-buttons">
+                    <button type="button"
+                            class="btn btn-outline"
+                            data-show="customer-login">
+                        Login
+                    </button>
+
+                    <button type="button"
+                            class="btn btn-primary"
+                            data-show="customer-register">
+                        Create Account
+                    </button>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="hero-tag">CUSTOMER CARE</span>
+
+                <h1>We're Here to Help You Move with Confidence</h1>
+
+                <p>
+                    Manage your account, review your delivery history,
+                    get answers to common questions and contact our
+                    customer support team.
+                </p>
+
+                <div class="hero-buttons">
+                    <button type="button"
+                            class="btn btn-primary"
+                            data-show="customer-login">
+                        <i class="fas fa-user"></i>
+                        My Account
+                    </button>
+
+                    <button type="button"
+                            class="btn btn-outline"
+                            data-show="contact-support">
+                        <i class="fas fa-headset"></i>
+                        Get Support
+                    </button>
+                </div>
+
+                <div class="hero-features">
+                    <span><i class="fas fa-check-circle"></i> Account Management</span>
+                    <span><i class="fas fa-check-circle"></i> Delivery History</span>
+                    <span><i class="fas fa-check-circle"></i> Customer Assistance</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= SERVICE CARDS ================= -->
+        <section class="section services-section" id="account-services">
+            <div class="section-heading">
+                <span class="section-subtitle">CUSTOMER SERVICES</span>
+                <h2>How Can We Help You?</h2>
+                <p>
+                    Access your account and find support for your GoRide
+                    delivery needs.
+                </p>
+            </div>
+
+            <div class="services-grid">
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Manage Your Account</h3>
+                    <p>
+                        View and update your personal information,
+                        contact details and account preferences.
+                    </p>
+                    <button type="button"
+                            class="btn btn-primary"
+                            data-show="customer-login">
+                        Manage Account
+                    </button>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Delivery History</h3>
+                    <p>
+                        Review delivery records linked to your account
+                        when delivery data is available.
+                    </p>
+                    <button type="button"
+                            class="btn btn-primary"
+                            data-show="customer-login">
+                        View History
+                    </button>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Support</h3>
+                    <p>
+                        Submit an enquiry, report a delivery problem
+                        or make a complaint.
+                    </p>
+                    <button type="button"
+                            class="btn btn-primary"
+                            data-show="contact-support">
+                        Contact Support
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ================= FAQ ================= -->
+        <section class="section faq-section" id="help-center">
+            <div class="section-heading">
+                <span class="section-subtitle">HELP CENTER</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>
+                    Find answers to common questions about your account
+                    and delivery requests.
+                </p>
+            </div>
+
+            <div class="faq-list">
+
+                <article class="faq-item">
+                    <button type="button"
+                            class="faq-question"
+                            data-faq-toggle
+                            aria-expanded="false"
+                            aria-controls="faqAnswer1">
+                        <span>How do I create a GoRide customer account?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer" id="faqAnswer1" hidden>
+                        <p>
+                            Select Create Account, complete the registration
+                            form and submit your details. This demonstration
+                            saves your profile in your current browser.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button type="button"
+                            class="faq-question"
+                            data-faq-toggle
+                            aria-expanded="false"
+                            aria-controls="faqAnswer2">
+                        <span>How can I review my delivery history?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer" id="faqAnswer2" hidden>
+                        <p>
+                            Log in with your registered email to open your
+                            dashboard. Delivery history appears when matching
+                            records are available in the browser's connected
+                            delivery data.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button type="button"
+                            class="faq-question"
+                            data-faq-toggle
+                            aria-expanded="false"
+                            aria-controls="faqAnswer3">
+                        <span>How do I report a delivery problem?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer" id="faqAnswer3" hidden>
+                        <p>
+                            Submit the customer support form, choose the
+                            appropriate category and explain the problem.
+                            Keep the reference number generated after submission.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button type="button"
+                            class="faq-question"
+                            data-faq-toggle
+                            aria-expanded="false"
+                            aria-controls="faqAnswer4">
+                        <span>Can I update my account information?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer" id="faqAnswer4" hidden>
+                        <p>
+                            Log in, open Profile Settings and update the
+                            available fields. Save your changes to update
+                            the profile stored in this browser.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button type="button"
+                            class="faq-question"
+                            data-faq-toggle
+                            aria-expanded="false"
+                            aria-controls="faqAnswer5">
+                        <span>Does submitting a complaint book a rider?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer" id="faqAnswer5" hidden>
+                        <p>
+                            No. The support form records an enquiry or
+                            complaint in this demonstration. It does not
+                            book a rider or contact a live support team.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ================= REGISTER ================= -->
+        <section class="section form-section" id="customer-register">
+            <div class="section-heading">
+                <span class="section-subtitle">JOIN GORIDE</span>
+                <h2>Create Your Customer Account</h2>
+                <p>
+                    Register to access your customer profile and account dashboard.
+                </p>
+            </div>
+
+            <div class="form-card">
+                <form id="customerRegisterForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="customerName">Full Name</label>
+                            <input type="text"
+                                   id="customerName"
+                                   name="customerName"
+                                   autocomplete="name"
+                                   placeholder="Enter your full name"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerEmail">Email Address</label>
+                            <input type="email"
+                                   id="customerEmail"
+                                   name="customerEmail"
+                                   autocomplete="email"
+                                   placeholder="Enter your email"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number</label>
+                            <input type="tel"
+                                   id="customerPhone"
+                                   name="customerPhone"
+                                   autocomplete="tel"
+                                   placeholder="Enter your phone number"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerAddress">Home or Contact Address</label>
+                            <input type="text"
+                                   id="customerAddress"
+                                   name="customerAddress"
+                                   autocomplete="street-address"
+                                   placeholder="Enter your address">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox"
+                                   id="customerConsent"
+                                   name="customerConsent"
+                                   required>
+                            I confirm that the information provided is correct.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+
+                    <p id="registerMessage"
+                       class="form-message"
+                       role="status"
+                       aria-live="polite"></p>
+
+                    <p class="form-switch">
+                        Already have an account?
+                        <button type="button"
+                                class="text-button"
+                                data-show="customer-login">
+                            Login here
+                        </button>
+                    </p>
+
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ================= LOGIN ================= -->
+        <section class="section form-section login-section" id="customer-login">
+            <div class="section-heading">
+                <span class="section-subtitle">WELCOME BACK</span>
+                <h2>Customer Login</h2>
+                <p>Enter the email address used when creating your account.</p>
+            </div>
+
+            <div class="form-card login-card">
+                <form id="customerLoginForm">
+
+                    <div class="form-group">
+                        <label for="loginCustomerEmail">Registered Email Address</label>
+                        <input type="email"
+                               id="loginCustomerEmail"
+                               name="loginCustomerEmail"
+                               autocomplete="email"
+                               placeholder="Enter your registered email"
+                               required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-right-to-bracket"></i>
+                        Open My Account
+                    </button>
+
+                    <p id="loginMessage"
+                       class="form-message"
+                       role="status"
+                       aria-live="polite"></p>
+
+                    <p class="form-switch">
+                        New to GoRide?
+                        <button type="button"
+                                class="text-button"
+                                data-show="customer-register">
+                            Create an account
+                        </button>
+                    </p>
+
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ================= CUSTOMER DASHBOARD ================= -->
+        <section class="section dashboard-section"
+                 id="customer-dashboard"
+                 hidden>
+
+            <div class="dashboard-heading">
+                <div>
+                    <span class="section-subtitle">MY GORIDE ACCOUNT</span>
+                    <h2>Welcome, <span id="dashboardCustomerName">Customer</span></h2>
+                    <p id="dashboardCustomerEmail"></p>
+                </div>
+
+                <button type="button"
+                        class="btn btn-outline"
+                        id="customerLogout">
+                    <i class="fas fa-right-from-bracket"></i>
+                    Log Out
+                </button>
+            </div>
+
+            <div class="dashboard-stats">
+
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p>Account</p>
+                    <h3 id="accountStatus">Active</h3>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <p>Delivery Records</p>
+                    <h3 id="customerDeliveryCount">0</h3>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <p>Support Requests</p>
+                    <h3 id="customerSupportCount">0</h3>
+                </article>
+
+            </div>
+
+            <!-- Dashboard navigation -->
+            <div class="dashboard-tabs">
+                <button type="button"
+                        class="dashboard-tab active"
+                        data-dashboard-tab="profile-panel"
+                        aria-pressed="true">
+                    <i class="fas fa-user"></i> My Profile
+                </button>
+
+                <button type="button"
+                        class="dashboard-tab"
+                        data-dashboard-tab="history-panel"
+                        aria-pressed="false">
+                    <i class="fas fa-box"></i> Delivery History
+                </button>
+
+                <button type="button"
+                        class="dashboard-tab"
+                        data-dashboard-tab="settings-panel"
+                        aria-pressed="false">
+                    <i class="fas fa-gear"></i> Account Settings
+                </button>
+
+                <button type="button"
+                        class="dashboard-tab"
+                        data-dashboard-tab="support-history-panel"
+                        aria-pressed="false">
+                    <i class="fas fa-ticket"></i> Support History
+                </button>
+            </div>
+
+
+            <!-- PROFILE PANEL -->
+            <section class="dashboard-panel"
+                     id="profile-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>My Profile</h3>
+                        <p>Update your personal and contact information.</p>
+                    </div>
+                </div>
+
+                <div class="form-card inner-card">
+                    <form id="customerProfileForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="profileName">Full Name</label>
+                                <input type="text"
+                                       id="profileName"
+                                       name="profileName"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profilePhone">Phone Number</label>
+                                <input type="tel"
+                                       id="profilePhone"
+                                       name="profilePhone"
+                                       required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="profileAddress">Contact Address</label>
+                                <input type="text"
+                                       id="profileAddress"
+                                       name="profileAddress">
+                            </div>
+
+                        </div>
+
+                        <p class="readonly-note">
+                            <i class="fas fa-lock"></i>
+                            Your registered email is displayed as your account identifier.
+                            Email changes are not available in this demo.
+                        </p>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-floppy-disk"></i>
+                            Save Profile Changes
+                        </button>
+
+                        <p id="profileMessage"
+                           class="form-message"
+                           role="status"
+                           aria-live="polite"></p>
+
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- DELIVERY HISTORY PANEL -->
+            <section class="dashboard-panel"
+                     id="history-panel"
+                     hidden>
+                <div class="panel-heading">
+                    <div>
+                        <h3>My Delivery History</h3>
+                        <p>Delivery records linked to your registered email.</p>
+                    </div>
+
+                    <button type="button"
+                            class="btn btn-outline btn-small"
+                            id="refreshHistory">
+                        <i class="fas fa-rotate"></i>
+                        Refresh
+                    </button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="delivery-table">
+                        <thead>
+                            <tr>
+                                <th>Reference</th>
+                                <th>Destination</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customerHistoryBody">
+                            <tr>
+                                <td colspan="4">No matching delivery records found.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="dashboard-note">
+                    Delivery history will appear here when matching records
+                    exist in the connected browser storage. This page does not
+                    create or track live deliveries.
+                </p>
+            </section>
+
+
+            <!-- ACCOUNT SETTINGS PANEL -->
+            <section class="dashboard-panel"
+                     id="settings-panel"
+                     hidden>
+                <div class="panel-heading">
+                    <div>
+                        <h3>Account Settings</h3>
+                        <p>Manage your contact preferences.</p>
+                    </div>
+                </div>
+
+                <div class="form-card inner-card">
+                    <form id="accountSettingsForm">
+
+                        <div class="setting-option">
+                            <div>
+                                <h4>Email Updates</h4>
+                                <p>Save your preference for email notifications.</p>
+                            </div>
+
+                            <label class="switch">
+                                <input type="checkbox"
+                                       id="emailUpdates"
+                                       name="emailUpdates">
+                                <span class="switch-slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="setting-option">
+                            <div>
+                                <h4>SMS Updates</h4>
+                                <p>Save your preference for SMS notifications.</p>
+                            </div>
+
+                            <label class="switch">
+                                <input type="checkbox"
+                                       id="smsUpdates"
+                                       name="smsUpdates">
+                                <span class="switch-slider"></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-floppy-disk"></i>
+                            Save Settings
+                        </button>
+
+                        <p id="settingsMessage"
+                           class="form-message"
+                           role="status"
+                           aria-live="polite"></p>
+
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- SUPPORT HISTORY PANEL -->
+            <section class="dashboard-panel"
+                     id="support-history-panel"
+                     hidden>
+                <div class="panel-heading">
+                    <div>
+                        <h3>My Support Requests</h3>
+                        <p>Review the enquiries and complaints you have submitted.</p>
+                    </div>
+
+                    <button type="button"
+                            class="btn btn-primary btn-small"
+                            data-show="contact-support">
+                        <i class="fas fa-plus"></i>
+                        New Request
+                    </button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="delivery-table">
+                        <thead>
+                            <tr>
+                                <th>Reference</th>
+                                <th>Category</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="supportHistoryBody">
+                            <tr>
+                                <td colspan="5">No support requests submitted yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- ================= CONTACT SUPPORT ================= -->
+        <section class="section form-section support-section"
+                 id="contact-support">
+
+            <div class="section-heading">
+                <span class="section-subtitle">WE'RE READY TO LISTEN</span>
+                <h2>Contact Customer Support</h2>
+                <p>
+                    Tell us what you need help with. Your submitted request
+                    will receive a reference number.
+                </p>
+            </div>
+
+            <div class="support-layout">
+
+                <aside class="support-info">
+                    <div class="support-info-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+
+                    <h3>How Can We Assist You?</h3>
+                    <p>
+                        Choose a category and explain your issue so your
+                        request can be identified clearly.
+                    </p>
+
+                    <div class="support-info-item">
+                        <i class="fas fa-box"></i>
+                        <div>
+                            <h4>Delivery Issues</h4>
+                            <p>Report delays or package problems.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-info-item">
+                        <i class="fas fa-user-shield"></i>
+                        <div>
+                            <h4>Account Assistance</h4>
+                            <p>Get help with your account details.</p>
+                        </div>
+                    </div>
+
+                    <div class="support-info-item">
+                        <i class="fas fa-comment-dots"></i>
+                        <div>
+                            <h4>Feedback and Complaints</h4>
+                            <p>Share a concern or suggestion.</p>
+                        </div>
+                    </div>
+
+                    <p class="demo-notice">
+                        <i class="fas fa-circle-info"></i>
+                        This is a demonstration form. It saves requests in
+                        your browser and does not contact a live support team.
+                    </p>
+                </aside>
+
+
+                <div class="form-card support-form-card">
+                    <form id="customerSupportForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="supportName">Your Full Name</label>
+                                <input type="text"
+                                       id="supportName"
+                                       name="supportName"
+                                       autocomplete="name"
+                                       placeholder="Enter your full name"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="supportEmail">Email Address</label>
+                                <input type="email"
+                                       id="supportEmail"
+                                       name="supportEmail"
+                                       autocomplete="email"
+                                       placeholder="Enter your email"
+                                       required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="supportCategory">Support Category</label>
+                                <select id="supportCategory"
+                                        name="supportCategory"
+                                        required>
+                                    <option value="">Choose a category</option>
+                                    <option value="Delivery Delay">Delivery Delay</option>
+                                    <option value="Missing Package">Missing Package</option>
+                                    <option value="Damaged Package">Damaged Package</option>
+                                    <option value="Account Problem">Account Problem</option>
+                                    <option value="Payment Enquiry">Payment Enquiry</option>
+                                    <option value="Rider Conduct">Rider Conduct</option>
+                                    <option value="Complaint">Complaint</option>
+                                    <option value="General Enquiry">General Enquiry</option>
+                                    <option value="Suggestion">Suggestion</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="supportSubject">Subject</label>
+                                <input type="text"
+                                       id="supportSubject"
+                                       name="supportSubject"
+                                       placeholder="Briefly describe your issue"
+                                       required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="supportMessage">Message</label>
+                                <textarea id="supportMessage"
+                                          name="supportMessage"
+                                          rows="6"
+                                          placeholder="Explain your issue or enquiry in detail"
+                                          required></textarea>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Support Request
+                        </button>
+
+                        <p id="supportFormMessage"
+                           class="form-message"
+                           role="status"
+                           aria-live="polite"></p>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Your Experience Matters to Us</h2>
+                <p>
+                    GoRide is committed to making your delivery experience
+                    simple, convenient and reliable.
+                </p>
+
+                <button type="button"
+                        class="btn btn-light"
+                        data-show="help-center">
+                    Explore Help Center
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="how-it-works.html">How it Works</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Customer Care</h3>
+                <a href="#help-center">Frequently Asked Questions</a>
+                <a href="#customer-login">My Account</a>
+                <a href="#contact-support">Submit a Complaint</a>
+                <a href="#account-services">Account Services</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span> GoRide.
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+<script src="../js/customer-support.js"></script>
+</body>
+</html>

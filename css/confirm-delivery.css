@@ -1,0 +1,665 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #092d49;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #092d49;
+}
+
+.logo img {
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    color: #173b57;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #00b978;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-btn {
+    color: #092d49;
+    border: 1px solid #092d49;
+}
+
+.register-btn {
+    color: #ffffff;
+    background: #00b978;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+    color: white;
+    background-color: #173b57;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: #092d49;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.page-hero {
+    background:
+        linear-gradient(
+            rgba(6, 47, 71, 0.92),
+            rgba(6, 47, 71, 0.92)
+        ),
+        url("../assets/background.jpeg") center/cover;
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-label,
+.section-label {
+    color: #00d98b;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 52px;
+    line-height: 1.15;
+    margin: 15px 0 20px;
+}
+
+.hero-content h1 span {
+    color: #00d98b;
+}
+
+.hero-content p {
+    color: #e4edf2;
+    max-width: 700px;
+    margin: auto;
+    font-size: 20px;
+}
+
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.confirmation-section {
+    padding: 90px 0;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.confirmation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.confirmation-card {
+    padding: 30px;
+    background: #f7fafb;
+    border-radius: 16px;
+    border: 1px solid #e6edf1;
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card-heading > span {
+    font-size: 35px;
+}
+
+.card-heading h2 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.card-heading p {
+    color: #667680;
+    font-size: 14px;
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e1e9ed;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item span {
+    color: #667680;
+    font-size: 15px;
+}
+
+.detail-item strong {
+    color: #092d49;
+    font-size: 15px;
+    text-align: right;
+    max-width: 60%;
+    word-break: break-word;
+}
+
+
+/* =========================
+   FARE
+========================= */
+
+.fare-card {
+    margin-top: 25px;
+    padding: 30px;
+    background: #092d49;
+    color: white;
+    border-radius: 16px;
+}
+
+.fare-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fare-heading .section-label {
+    font-size: 16px;
+}
+
+.fare-heading h2 {
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+.fare-amount {
+    color: #00d98b;
+    font-size: 35px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.fare-note {
+    color: #c8d8df;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   CONFIRMATION MESSAGE
+========================= */
+
+.confirmation-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 25px;
+    padding: 25px;
+    background: #f2f7f8;
+    border-radius: 16px;
+    border: 1px solid #e3eaee;
+}
+
+.message-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00b978;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.confirmation-message h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.confirmation-message p {
+    color: #667680;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.confirmation-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.primary-btn {
+    color: white;
+    background: #00b978;
+    border: 1px solid #00b978;
+}
+
+.secondary-btn {
+    color: #092d49;
+    background: white;
+    border: 1px solid #092d49;
+}
+
+.primary-btn:hover {
+    background: #092d49;
+    border-color: #092d49;
+}
+
+.secondary-btn:hover {
+    background: #173b57;
+    color: white;
+}
+
+
+/* =========================
+   SUCCESS CARD
+========================= */
+
+.success-card {
+    display: none;
+    margin-top: 30px;
+    padding: 45px 30px;
+    background: #f7fafb;
+    border: 1px solid #dfe9ed;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00b978;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.success-card h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.success-card > p {
+    color: #667680;
+}
+
+.tracking-box {
+    max-width: 400px;
+    margin: 25px auto;
+    padding: 20px;
+
+    background: white;
+
+    border: 1px dashed #00b978;
+    border-radius: 12px;
+}
+
+.tracking-box p {
+    color: #667680;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.tracking-box strong {
+    color: #092d49;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.success-note {
+    margin-bottom: 25px;
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    background:
+        linear-gradient(
+            rgba(6, 47, 71, 0.92),
+            rgba(6, 47, 71, 0.92)
+        ),
+        url("../assets/background.jpeg") center/cover;
+
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-section h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.cta-section p {
+    color: #dce8ee;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #092d49;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer .logo {
+    margin-bottom: 15px;
+}
+
+.footer h3 {
+    font-size: 25px;
+}
+
+.footer p {
+    color: #b8c8d1;
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #d6e1e6;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    color: #00b978;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 35px;
+    padding-top: 20px;
+    color: #aebfc8;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar,
+    .nav-buttons {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar.mobile-open {
+        display: flex;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .confirmation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .logo img {
+        width: 150px;
+        height: 55px;
+    }
+
+    .page-hero {
+        min-height: 360px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-label,
+    .section-label {
+        font-size: 20px;
+    }
+
+    .confirmation-section {
+        padding: 60px 0;
+    }
+
+    .confirmation-card,
+    .fare-card {
+        padding: 22px;
+    }
+
+    .card-heading h2 {
+        font-size: 21px;
+    }
+
+    .fare-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fare-heading h2 {
+        font-size: 23px;
+    }
+
+    .fare-amount {
+        font-size: 30px;
+    }
+
+    .detail-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .detail-item strong {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+    .confirmation-actions a,
+    .confirmation-actions button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .success-card h2 {
+        font-size: 27px;
+    }
+}
+```

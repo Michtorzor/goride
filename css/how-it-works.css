@@ -1,0 +1,689 @@
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #092d49;
+    background: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   HEADER — MATCHING services.css
+================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 75px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #092d49;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo img {
+    display: block;
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    color: #173b57;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00b978;
+}
+
+/* LOGIN / REGISTER */
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border: 1px solid #092d49;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.login-btn {
+    color: #092d49;
+    background: #ffffff;
+}
+
+.register-btn {
+    color: #ffffff;
+    background: #00b978;
+    border-color: #00b978;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+    color: #ffffff;
+    background: #173b57;
+    border-color: #173b57;
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-btn {
+    display: none;
+    padding: 5px;
+    border: none;
+    background: none;
+    color: #092d49;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   PAGE HERO
+================================================== */
+
+.page-hero {
+    min-height: 430px;
+    padding: 70px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(6, 47, 71, 0.92),
+            rgba(6, 47, 71, 0.92)
+        ),
+        url("../assets/background.jpeg") center/cover no-repeat;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 850px;
+}
+
+.page-hero span {
+    color: #00d98b;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    margin: 15px 0 20px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e4edf2;
+    font-size: 20px;
+}
+
+
+/* ==================================================
+   GENERAL CONTAINER
+================================================== */
+
+.section-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   SECTION HEADINGS
+================================================== */
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading span {
+    color: #00d98b;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin: 12px 0 20px;
+    color: #092d49;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.section-heading p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #5b6b76;
+    font-size: 18px;
+}
+
+
+/* ==================================================
+   WORKFLOW SECTIONS
+================================================== */
+
+.workflow-section {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+.workflow-section.alternate {
+    background: #f2f7f8;
+}
+
+
+/* ==================================================
+   WORKFLOW STEP CARDS
+================================================== */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.step {
+    position: relative;
+    min-width: 0;
+    padding: 30px;
+    background: #f7fafb;
+    border: 1px solid #e6edf1;
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+.alternate .step {
+    background: #ffffff;
+}
+
+.step:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(9, 45, 73, 0.1);
+}
+
+/* STEP NUMBER */
+
+.number {
+    margin-bottom: 12px;
+    color: #00b978;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* STEP TITLE */
+
+.step h3 {
+    margin-bottom: 10px;
+    color: #092d49;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* STEP DESCRIPTION */
+
+.step p {
+    color: #667680;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   WORKFLOW BUTTON
+================================================== */
+
+.workflow-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.workflow-button a {
+    display: inline-block;
+    padding: 13px 22px;
+    color: #ffffff;
+    background: #00b978;
+    border: 1px solid #00b978;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.workflow-button a:hover {
+    color: #00d98b;
+    background: #092d49;
+    border-color: #092d49;
+}
+
+
+/* ==================================================
+   CALL TO ACTION
+================================================== */
+
+.cta-section {
+    padding: 80px 0;
+    color: #ffffff;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(6, 47, 71, 0.92),
+            rgba(6, 47, 71, 0.92)
+        ),
+        url("../assets/background.jpeg") center/cover no-repeat;
+}
+
+.cta-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.cta-section p {
+    margin-bottom: 30px;
+    color: #dce8ee;
+    font-size: 16px;
+}
+
+/* CTA BUTTONS */
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.main-btn,
+.outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.main-btn {
+    color: #ffffff;
+    background: #00b978;
+    border: 1px solid #ffffff;
+}
+
+.main-btn:hover {
+    color: #00d98b;
+    background: #092d49;
+}
+
+.outline-btn {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
+}
+
+.outline-btn:hover {
+    color: #092d49;
+    background: #00a96d;
+}
+
+
+/* ==================================================
+   FOOTER 
+================================================== */
+
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 50px 0 0;
+    color: #ffffff;
+    background: #062f47;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer p {
+    color: #b8c8d1;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.footer-links a {
+    color: #d6e1e6;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00b978;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .footer-links {
+        justify-content: flex-start;
+        gap: 20px 35px;
+        text-align: left;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 16px;
+    }
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    width: 100%;
+    max-width: none;
+    margin: 35px 0 0;
+    padding: 20px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #aebfc8;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar,
+    .nav-buttons {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar.mobile-open {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 25px 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar.mobile-open a {
+        font-size: 18px;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Stack footer sections on smaller screens. */
+
+    .footer-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footer-logo,
+    .footer-links {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+        gap: 30px 45px;
+    }
+
+    .copyright {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        min-height: 70px;
+    }
+
+    .navbar.mobile-open {
+        top: 70px;
+    }
+
+    .page-hero {
+        min-height: 380px;
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .page-hero span,
+    .section-heading span {
+        font-size: 22px;
+    }
+
+    .section-heading h2,
+    .cta-section h2 {
+        font-size: 30px;
+    }
+
+    .section-heading p {
+        font-size: 16px;
+    }
+
+    .workflow-section {
+        padding: 70px 0;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .step {
+        padding: 25px;
+    }
+
+    .step h3 {
+        font-size: 25px;
+    }
+
+    .step p {
+        font-size: 15px;
+    }
+
+    .number {
+        font-size: 25px;
+    }
+
+    .cta-section {
+        padding: 65px 0;
+    }
+
+    .cta-section p {
+        font-size: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-btn,
+    .outline-btn {
+        width: 100%;
+    }
+
+    .logo img {
+        width: 170px;
+        height: 60px;
+    }
+
+    .footer-logo img,
+    .footer .logo img {
+        width: 170px;
+        height: 60px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .footer-links > div {
+        width: 100%;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .copyright {
+        margin-top: 25px;
+        padding: 18px 5%;
+        font-size: 12px;
+        text-align: center;
+    }
+}

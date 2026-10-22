@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact GoRide</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+<body>
+<header class="site-header">
+    <div class="nav-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/logo.jpeg" alt="GoRide Logo">
+        </a>
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="../pages/login.html" class="login-btn">
+                Login
+            </a>
+            <a href="../pages/register.html" class="register-btn">
+                Register
+            </a>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+    <div>
+        <span>CONTACT GORIDE</span>
+        <h1>We're Here to Help</h1>
+        <p>
+            Whether you are a customer, professional rider or fleet owner,
+            you can contact the GoRide team for assistance.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+    <div class="contact-container">
+
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-info">
+            <span class="section-label">GET IN TOUCH</span>
+            <h2>
+                How Can We Help?
+            </h2>
+            <p>
+                Contact GoRide for questions about deliveries, rider
+                registration, fleet registration or business partnerships.
+            </p>
+
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+234 800 000 0000</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">✉️</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>support@goride.com</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h3>Service Area</h3>
+                    <p>
+                        Available in selected cities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">🕐</div>
+                <div>
+                    <h3>Support Hours</h3>
+                    <p>
+                        Monday - Saturday
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form-box">
+            <h2>Send Us a Message</h2>
+            <p class="form-description">
+                Fill in the form and tell us what you need help with.
+            </p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">
+                        Full Name
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone Number
+                        </label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="supportType">
+                        What Do You Need Help With?
+                    </label>
+                    <select id="supportType" name="supportType" required>
+                        <option value="">
+                            Select an option
+                        </option>
+                        <option value="customer">
+                            Customer Support
+                        </option>
+                        <option value="rider">
+                            Rider Support / Registration
+                        </option>
+                        <option value="fleet">
+                            Fleet Support / Registration
+                        </option>
+                        <option value="business">
+                            Business Partnership
+                        </option>
+                        <option value="general">
+                            General Enquiry
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">
+                        Subject
+                    </label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Enter subject"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">
+                        Message
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK OPTIONS -->
+<section class="quick-section">
+    <div class="quick-container">
+        <div class="quick-card">
+            <span>📦</span>
+            <h3>Need a Delivery?</h3>
+            <p>
+                Send your package through the GoRide platform.
+            </p>
+            <a href="send-package.html">
+                Send a Package →
+            </a>
+        </div>
+
+        <div class="quick-card">
+            <span>🏍️</span>
+            <h3>Want to Become a Rider?</h3>
+            <p>
+                Register as a professional GoRide rider.
+            </p>
+            <a href="rider-reg.html">
+                Register as Rider →
+            </a>
+        </div>
+
+        <div class="quick-card">
+            <span>🚚</span>
+            <h3>Own a Fleet?</h3>
+            <p>
+                Register your fleet and manage your operations.
+            </p>
+            <a href="fleet-owner.html">
+                Register Fleet →
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 GoRide. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="../js/contact.js"></script>
+</body>
+</html>

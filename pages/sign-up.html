@@ -1,0 +1,378 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>GoRide - Sign Up</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Sign Up CSS -->
+
+    <link
+        rel="stylesheet" href="../css/sign-up css"
+    >
+
+</head>
+
+
+<body>
+    <a href="../index.html" class="back-home">
+    ← Back to Home
+    </a>
+
+
+    <!-- ==================================
+         SIGN UP PAGE
+    =================================== -->
+
+    <div class="signup-page">
+
+
+        <!-- BACKGROUND -->
+
+        <div class="signup-background"></div>
+
+        <div class="signup-overlay"></div>
+
+
+        <!-- CONTAINER -->
+
+        <div class="signup-container">
+
+
+            <!-- LOGO -->
+
+            <div class="goride-logo">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-motorcycle"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        Go<span>Ride</span>
+                    </h1>
+
+                    <p>
+                        Fast. Safe. Reliable.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIGN UP CARD -->
+
+            <div class="signup-card">
+
+
+                <!-- CLOSE -->
+
+                <button
+                    type="button"
+                    class="close-btn"
+                    onclick="window.location.href='index.html'"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+
+                <!-- HEADING -->
+
+                <div class="signup-heading">
+
+                    <div class="heading-icon">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                    </div>
+
+
+                    <h2>
+                        Create Your Account
+                    </h2>
+
+
+                    <p>
+                        Join GoRide and enjoy fast,
+                        safe and reliable delivery.
+                    </p>
+
+                </div>
+
+
+                <!-- SIGN UP FORM -->
+
+                <form id="signupForm">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="input-group">
+
+                        <label for="signupName">
+                            Full Name
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user"></i>
+
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL + PHONE -->
+
+                    <div class="form-row">
+
+
+                        <div class="input-group">
+
+                            <label for="signupEmail">
+                                Email Address
+                            </label>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+
+                                <input
+                                    type="email"
+                                    id="signupEmail"
+                                    placeholder="Email address"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="signupPhone">
+                                Phone Number
+                            </label>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-phone"></i>
+
+
+                                <input
+                                    type="tel"
+                                    id="signupPhone"
+                                    placeholder="Phone number"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="signupPassword"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                minlength="6"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirmPassword"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="signupTerms"
+                            required
+                        >
+
+
+                        <span>
+                            I agree to GoRide's
+                            <a href="./terms.html">
+                                Terms & Conditions
+                            </a>
+                            and
+                            <a href="./privacy.html">
+                                Privacy Policy
+                            </a>.
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- CREATE ACCOUNT -->
+
+                    <button
+                        type="submit"
+                        class="signup-btn"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Create Account
+
+                    </button>
+
+
+                </form>
+
+                <!-- LOGIN -->
+                <div class="login-link">
+                    <p>
+                        Already have an account?
+                        <a href="./login.html">
+                            Login
+                        </a>
+                    </p>
+                </div>
+
+                <!-- REGISTER -->
+                <div class="register-link">
+                    <p>
+                        Want to become a GoRide partner?
+                        <a href="./register.html">
+                            Register
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/register-login-signup.js"></script>
+
+</body>
+
+</html>
+```

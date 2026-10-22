@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GoRide - Professional Rider Registration</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Rider Registration CSS -->
+
+    <link rel="stylesheet"
+          href="../css/rider-reg.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- BACK TO REGISTER -->
+    <!-- ============================= -->
+
+    <header class="site-header">
+
+    <div class="header-container">
+
+        <!-- GoRide Logo -->
+        <a href="../index.html" class="header-logo">
+            <img src="../assets/logo.jpeg" alt="GoRide Logo">
+        </a>
+
+        <!-- Header Navigation -->
+        <nav class="header-nav">
+
+            <a href="register.html" class="header-btn return-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Return to Registration</span>
+            </a>
+
+            <a href="../index.html" class="header-btn home-btn">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="javascript:history.back()" class="header-btn return-btn">
+            <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </nav>
+    </div>
+</header>
+    <!-- ============================= -->
+    <!-- RIDER REGISTRATION PAGE -->
+    <!-- ============================= -->
+    <main class="rider-page">
+        <section class="auth-box rider-box"
+                 id="riderForm">
+            <!-- ============================= -->
+            <!-- HEADING -->
+            <!-- ============================= -->
+
+            <div class="auth-heading">
+
+                <span class="heading-icon">
+
+                    <i class="fa-solid fa-motorcycle"></i>
+
+                </span>
+
+
+                <h2>Professional Rider</h2>
+
+
+                <p>
+                    Join GoRide and earn by delivering packages.
+                </p>
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- RIDER FORM -->
+            <!-- ============================= -->
+
+            <form id="riderFormElement">
+
+
+                <!-- ============================= -->
+                <!-- PERSONAL INFORMATION -->
+                <!-- ============================= -->
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Personal Information
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="input-group">
+
+                        <label for="riderName">
+                            Full Name
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="riderName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="input-group">
+
+                        <label for="riderPhone">
+                            Phone Number
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="riderPhone"
+                                placeholder="0801 234 5678"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="riderEmail">
+                        Email Address
+                    </label>
+
+                    <div class="input-field">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="riderEmail"
+                            placeholder="example@email.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- LOCATION & EXPERIENCE -->
+                <!-- ============================= -->
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Location & Experience
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <!-- CITY -->
+
+                    <div class="input-group">
+
+                        <label for="riderCity">
+                            City
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-city"></i>
+
+                            <input
+                                type="text"
+                                id="riderCity"
+                                placeholder="e.g. Lagos"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EXPERIENCE -->
+
+                    <div class="input-group">
+
+                        <label for="riderExperience">
+                            Riding Experience
+                        </label>
+
+                        <div class="input-field select-field">
+
+                            <i class="fa-solid fa-road"></i>
+
+                            <select
+                                id="riderExperience"
+                                required
+                            >
+
+                                <option value="">
+                                    Select experience
+                                </option>
+
+                                <option value="Less than 1 year">
+                                    Less than 1 year
+                                </option>
+
+                                <option value="1 - 2 years">
+                                    1 - 2 years
+                                </option>
+
+                                <option value="3 - 5 years">
+                                    3 - 5 years
+                                </option>
+
+                                <option value="5+ years">
+                                    5+ years
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- BIKE INFORMATION -->
+                <!-- ============================= -->
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-motorcycle"></i>
+
+                    Bike Information
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="bikeInfo">
+                        Bike Information
+                    </label>
+
+                    <div class="input-field">
+
+                        <i class="fa-solid fa-motorcycle"></i>
+
+                        <input
+                            type="text"
+                            id="bikeInfo"
+                            placeholder="e.g. Honda Ace 110"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-row">
+
+
+                    <!-- LICENSE -->
+
+                    <div class="input-group">
+
+                        <label for="licenseNumber">
+                            Driver's License Number
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="licenseNumber"
+                                placeholder="License number"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PLATE -->
+
+                    <div class="input-group">
+
+                        <label for="plateNumber">
+                            Bike Plate Number
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-tag"></i>
+
+                            <input
+                                type="text"
+                                id="plateNumber"
+                                placeholder="Plate number"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- ADDRESS -->
+                <!-- ============================= -->
+
+                <div class="input-group">
+
+                    <label for="riderAddress">
+                        Residential Address
+                    </label>
+
+                    <div class="input-field">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <input
+                            type="text"
+                            id="riderAddress"
+                            placeholder="Enter your residential address"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- TERMS -->
+                <!-- ============================= -->
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        id="riderTerms"
+                        required
+                    >
+
+                    <span>
+
+                        I agree to GoRide's
+
+                        <a href="terms.html">
+                            Terms & Conditions
+                        </a>
+
+                        and
+
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>.
+
+                    </span>
+
+                </label>
+
+
+
+                <!-- ============================= -->
+                <!-- SUBMIT -->
+                <!-- ============================= -->
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                    id="riderSubmitBtn"
+                >
+
+                    <i class="fa-solid fa-motorcycle"></i>
+
+                    Apply as Professional Rider
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script src="../js/rider-reg.js"></script>
+
+
+</body>
+
+</html>

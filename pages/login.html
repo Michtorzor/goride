@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GoRide - Login</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- LOGIN CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         BACK TO HOME
+    ====================================== -->
+
+    <a href="../index.html" class="back-home">
+        <i class="fas fa-arrow-left"></i>
+        Back to Home
+    </a>
+
+
+
+    <!-- =====================================
+         LOGIN PAGE
+    ====================================== -->
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+
+            <!-- LOGO -->
+
+            <div class="logo-area">
+
+                <img
+                    src="../assets/logo.jpeg"
+                    alt="GoRide Logo"
+                    class="login-logo"
+                >
+
+                <h1>Welcome Back</h1>
+
+                <p>
+                    Login to your GoRide account
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 LOGIN FORM
+            ====================================== -->
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fas fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fas fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="loginPassword"
+                            aria-label="Show password"
+                        >
+                            <i class="fas fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     REMEMBER ME / FORGOT PASSWORD
+                ====================================== -->
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        <span>
+                            Remember Me
+                        </span>
+
+                    </label>
+
+
+                    <!-- FORGOT PASSWORD LINK -->
+
+                    <a
+                        href="#"
+                        id="forgotPassword"
+                        class="forgot-password"
+                    >
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+
+                    <i class="fas fa-right-to-bracket"></i>
+
+                    Login
+
+                </button>
+
+
+                <!-- LOGIN MESSAGE -->
+
+                <div
+                    id="loginMessage"
+                    class="login-message"
+                ></div>
+
+            </form>
+
+
+
+            <!-- =====================================
+                 SOCIAL LOGIN DIVIDER
+            ====================================== -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>
+                    or continue with
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+
+            <!-- SOCIAL BUTTONS -->
+
+            <div class="social-login">
+
+                <button
+                    type="button"
+                    class="social-btn google"
+                    title="Continue with Google"
+                >
+                    <i class="fab fa-google"></i>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="social-btn facebook"
+                    title="Continue with Facebook"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="social-btn instagram"
+                    title="Continue with Instagram"
+                >
+                    <i class="fab fa-instagram"></i>
+                </button>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 SIGN UP
+            ====================================== -->
+
+            <p class="signup-text">
+
+                Don't have an account?
+
+                <a href="#" id="openSignup">
+                    Sign Up
+                </a>
+            </p>
+
+            <!-- REGISTER -->
+
+            <p class="register-text">
+
+                Want to join GoRide?
+
+                <a href="./register.html">
+                    Register
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </main>
+
+
+
+
+    <!-- ==================================================
+         FORGOT PASSWORD POPUP
+         THIS IS OUTSIDE THE LOGIN FORM
+    =================================================== -->
+
+    <div
+        class="forgot-modal"
+        id="forgotModal"
+    >
+
+        <div class="forgot-card">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="forgot-close"
+                id="forgotClose"
+                aria-label="Close Forgot Password"
+            >
+                &times;
+            </button>
+
+
+
+            <!-- LOCK ICON -->
+
+            <div class="forgot-icon">
+
+                <i class="fas fa-lock"></i>
+
+            </div>
+
+
+
+            <!-- TITLE -->
+
+            <h2>
+                Forgot Password?
+            </h2>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <p class="forgot-description">
+
+                Enter your email address and we will
+                help you reset your password.
+
+            </p>
+
+
+
+            <!-- =====================================
+                 FORGOT PASSWORD FORM
+            ====================================== -->
+
+            <form id="forgotForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="forgotEmail">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fas fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="forgotEmail"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SEND RESET LINK -->
+
+                <button
+                    type="submit"
+                    class="forgot-submit"
+                >
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    Send Reset Link
+
+                </button>
+
+            </form>
+
+
+
+            <!-- =====================================
+                 BACK TO LOGIN
+            ====================================== -->
+
+            <p class="back-login">
+
+                Remember your password?
+
+                <a
+                    href="#"
+                    id="backToLogin"
+                >
+                    Back to Login
+                </a>
+
+            </p>
+
+
+
+            <!-- FORGOT PASSWORD MESSAGE -->
+
+            <div
+                id="forgotMessage"
+                class="forgot-message"
+            ></div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==================================================
+         SHARED LOGIN / REGISTER / SIGN UP JAVASCRIPT
+    =================================================== -->
+
+    <script src="../js/register-login-signup.js"></script>
+
+
+</body>
+
+</html>

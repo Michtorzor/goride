@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GoRide | Fleet Services</title>
+
+    <meta
+        name="description"
+        content="Manage your GoRide fleet, register bikes and riders, assign deliveries and monitor fleet earnings."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/fleet-services.css">
+</head>
+
+<body>
+
+    <!-- HEADER: SAME PATTERN AS ABOUT.HTML -->
+    <header class="site-header">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.jpeg" alt="GoRide Logo">
+            </a>
+
+            <nav class="navbar" id="navbar">
+
+                <a href="../index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="services.html" class="active">Services</a>
+
+                <a href="how-it-works.html">How It Works</a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+            <div class="nav-buttons">
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+                <a href="register.html" class="register-btn">
+                    Register
+                </a>
+
+            </div>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+    <!-- FLEET HERO -->
+    <section class="page-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <p class="hero-label">FLEET SERVICES</p>
+                <h1>Manage Your Fleet. Grow Your Business.</h1>
+                <p>
+                    Register your bikes and riders, organize
+                    assignments, monitor deliveries and keep
+                    your fleet operations in one place.
+                </p>
+                <div class="hero-buttons">
+
+                    <a href="#fleet-services" class="primary-btn">
+                        Manage Fleet
+                    </a>
+
+                    <a href="fleet-owner.html" class="secondary-btn">
+                        Fleet Registration
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FLEET OVERVIEW -->
+    <section class="overview">
+
+        <div class="section-heading">
+
+            <p class="section-label">FLEET OVERVIEW</p>
+
+            <h2>Your Fleet at a Glance</h2>
+
+            <p>
+                Monitor your bikes, riders, deliveries and
+                recorded earnings from your fleet workspace.
+            </p>
+
+        </div>
+
+        <div class="overview-grid">
+
+            <div class="overview-card">
+
+                <div class="overview-icon">🏍️</div>
+
+                <h3>Total Bikes</h3>
+
+                <p id="totalBikes">0</p>
+
+            </div>
+
+            <div class="overview-card">
+
+                <div class="overview-icon">🧑‍✈️</div>
+
+                <h3>Total Riders</h3>
+
+                <p id="totalRiders">0</p>
+
+            </div>
+
+            <div class="overview-card">
+
+                <div class="overview-icon">📦</div>
+
+                <h3>Total Deliveries</h3>
+
+                <p id="totalDeliveries">0</p>
+
+            </div>
+
+            <div class="overview-card">
+
+                <div class="overview-icon">₦</div>
+
+                <h3>Recorded Earnings</h3>
+
+                <p id="totalEarnings">₦0</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EIGHT FLEET SERVICE OPTIONS -->
+    <section class="fleet-services" id="fleet-services">
+
+        <div class="section-heading">
+
+            <p class="section-label">FLEET MANAGEMENT</p>
+
+            <h2>Everything Your Fleet Needs</h2>
+
+            <p>
+                Select a service below to manage a different
+                part of your GoRide fleet operations.
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            <!-- 1. FLEET DASHBOARD -->
+            <article class="service-card">
+
+                <div class="service-icon">📊</div>
+
+                <h3>Fleet Dashboard</h3>
+
+                <p>
+                    View your fleet statistics, registered
+                    resources, delivery activities and
+                    recorded earnings.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    id="openDashboard"
+                >
+                    View Dashboard
+                </button>
+
+            </article>
+
+
+            <!-- 2. REGISTER A BIKE -->
+            <article class="service-card">
+
+                <div class="service-icon">🏍️</div>
+
+                <h3>Register a Bike</h3>
+
+                <p>
+                    Add a bike to your fleet by recording
+                    its name, registration plate, colour
+                    and availability status.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    data-modal="bikeModal"
+                >
+                    Register Bike
+                </button>
+
+            </article>
+
+
+            <!-- 3. REGISTER A RIDER -->
+            <article class="service-card">
+
+                <div class="service-icon">🧑‍✈️</div>
+
+                <h3>Register a Rider</h3>
+
+                <p>
+                    Add rider information and maintain
+                    the details needed to organize your
+                    fleet operations.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    data-modal="riderModal"
+                >
+                    Register Rider
+                </button>
+
+            </article>
+
+
+            <!-- 4. MANAGE BIKES -->
+            <article class="service-card">
+
+                <div class="service-icon">🛵</div>
+
+                <h3>Manage Bikes</h3>
+
+                <p>
+                    Review registered bikes and check
+                    their recorded status and registration
+                    details.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    data-modal="manageBikesModal"
+                >
+                    Manage Bikes
+                </button>
+
+            </article>
+
+
+            <!-- 5. MANAGE RIDERS -->
+            <article class="service-card">
+
+                <div class="service-icon">👥</div>
+
+                <h3>Manage Riders</h3>
+
+                <p>
+                    Review registered riders and their
+                    contact details to keep your fleet
+                    records organized.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    data-modal="manageRidersModal"
+                >
+                    Manage Riders
+                </button>
+
+            </article>
+
+
+            <!-- 6. ASSIGN RIDER TO BIKE -->
+            <article class="service-card">
+
+                <div class="service-icon">🔗</div>
+
+                <h3>Assign Rider to Bike</h3>
+
+                <p>
+                    Connect a registered rider to an
+                    available bike and review your
+                    recorded assignments.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    data-modal="assignmentModal"
+                >
+                    Make Assignment
+                </button>
+
+            </article>
+
+
+            <!-- 7. MANAGE DELIVERIES -->
+            <article class="service-card">
+
+                <div class="service-icon">📦</div>
+
+                <h3>Manage Deliveries</h3>
+
+                <p>
+                    Record delivery references, destinations,
+                    assigned riders, delivery status
+                    and delivery amounts.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    data-modal="deliveriesModal"
+                >
+                    Manage Deliveries
+                </button>
+
+            </article>
+
+
+            <!-- 8. VIEW EARNINGS -->
+            <article class="service-card">
+
+                <div class="service-icon">💰</div>
+
+                <h3>View Earnings</h3>
+
+                <p>
+                    Review recorded delivery earnings and
+                    see the total generated by deliveries
+                    marked as completed.
+                </p>
+
+                <button
+                    type="button"
+                    class="card-action"
+                    data-modal="earningsModal"
+                >
+                    View Earnings
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- 1. FLEET DASHBOARD POP-UP -->
+    <div class="modal" id="dashboardModal" aria-hidden="true">
+
+        <div
+            class="modal-content modal-wide"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="dashboardTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close dashboard"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="dashboardTitle">Fleet Dashboard</h2>
+
+                <p>
+                    Review the current information recorded
+                    for your fleet.
+                </p>
+
+            </div>
+
+            <div class="dashboard-details">
+
+                <div class="detail-box">
+                    <h3>Registered Bikes</h3>
+                    <p id="modalBikes">0</p>
+                </div>
+
+                <div class="detail-box">
+                    <h3>Registered Riders</h3>
+                    <p id="modalRiders">0</p>
+                </div>
+
+                <div class="detail-box">
+                    <h3>Recorded Deliveries</h3>
+                    <p id="modalDeliveries">0</p>
+                </div>
+
+                <div class="detail-box">
+                    <h3>Recorded Earnings</h3>
+                    <p id="modalEarnings">₦0</p>
+                </div>
+
+            </div>
+
+            <div class="notice">
+                These figures reflect information saved in
+                this browser. They are not live server or
+                payment records.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 2. REGISTER BIKE POP-UP -->
+    <div class="modal" id="bikeModal" aria-hidden="true">
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="bikeTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close bike registration"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="bikeTitle">Register a Bike</h2>
+
+                <p>Add a bike to your fleet records.</p>
+
+            </div>
+
+            <form id="bikeForm">
+
+                <div>
+                    <label for="bikeName">Bike Name / Model</label>
+                    <input
+                        type="text"
+                        id="bikeName"
+                        placeholder="e.g. Honda Ace 110"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="bikePlate">Registration Plate</label>
+                    <input
+                        type="text"
+                        id="bikePlate"
+                        placeholder="Enter registration plate"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="bikeColor">Bike Colour</label>
+                    <input
+                        type="text"
+                        id="bikeColor"
+                        placeholder="e.g. Black"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="bikeStatus">Bike Status</label>
+                    <select id="bikeStatus" required>
+                        <option value="Available">Available</option>
+                        <option value="In Use">In Use</option>
+                        <option value="Under Maintenance">
+                            Under Maintenance
+                        </option>
+                    </select>
+                </div>
+
+                <button type="submit">Save Bike</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3. REGISTER RIDER POP-UP -->
+    <div class="modal" id="riderModal" aria-hidden="true">
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="riderTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close rider registration"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="riderTitle">Register a Rider</h2>
+
+                <p>Add a rider to your fleet records.</p>
+
+            </div>
+
+            <form id="riderForm">
+
+                <div>
+                    <label for="riderName">Full Name</label>
+                    <input
+                        type="text"
+                        id="riderName"
+                        placeholder="Enter rider's full name"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="riderPhone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="riderPhone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="riderEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="riderEmail"
+                        placeholder="Enter email address"
+                    >
+                </div>
+
+                <div>
+                    <label for="riderLicense">Rider's Licence</label>
+                    <input
+                        type="text"
+                        id="riderLicense"
+                        placeholder="Enter licence details"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Save Rider</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- 4. MANAGE BIKES POP-UP -->
+    <div class="modal" id="manageBikesModal" aria-hidden="true">
+
+        <div
+            class="modal-content modal-wide"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="manageBikesTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close bikes list"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="manageBikesTitle">Manage Bikes</h2>
+
+                <p>View the bikes registered in your fleet.</p>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Bike</th>
+                            <th>Registration Plate</th>
+                            <th>Colour</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bikesTableBody">
+                        <tr>
+                            <td colspan="4">No bikes registered yet.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 5. MANAGE RIDERS POP-UP -->
+    <div class="modal" id="manageRidersModal" aria-hidden="true">
+
+        <div
+            class="modal-content modal-wide"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="manageRidersTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close riders list"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="manageRidersTitle">Manage Riders</h2>
+
+                <p>View the riders registered in your fleet.</p>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Licence</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="ridersTableBody">
+                        <tr>
+                            <td colspan="4">No riders registered yet.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 6. ASSIGN RIDER TO BIKE POP-UP -->
+    <div class="modal" id="assignmentModal" aria-hidden="true">
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="assignmentTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close assignment"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="assignmentTitle">Assign Rider to Bike</h2>
+
+                <p>Choose a registered rider and a bike.</p>
+
+            </div>
+
+            <form id="assignmentForm">
+
+                <div>
+                    <label for="assignmentRider">Select Rider</label>
+                    <select id="assignmentRider" required>
+                        <option value="">Select a rider</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="assignmentBike">Select Bike</label>
+                    <select id="assignmentBike" required>
+                        <option value="">Select a bike</option>
+                    </select>
+                </div>
+
+                <button type="submit">Save Assignment</button>
+
+            </form>
+
+            <h3 class="subheading">Current Assignments</h3>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Rider</th>
+                            <th>Bike</th>
+                            <th>Registration Plate</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="assignmentsTableBody">
+                        <tr>
+                            <td colspan="3">No assignments recorded yet.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 7. MANAGE DELIVERIES POP-UP -->
+    <div class="modal" id="deliveriesModal" aria-hidden="true">
+
+        <div
+            class="modal-content modal-wide"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="deliveriesTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close deliveries"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="deliveriesTitle">Manage Deliveries</h2>
+
+                <p>Record and review fleet delivery activities.</p>
+
+            </div>
+
+            <form id="deliveryForm">
+
+                <div>
+                    <label for="deliveryReference">
+                        Delivery Reference
+                    </label>
+                    <input
+                        type="text"
+                        id="deliveryReference"
+                        placeholder="e.g. GR-1001"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="deliveryDestination">
+                        Delivery Destination
+                    </label>
+                    <input
+                        type="text"
+                        id="deliveryDestination"
+                        placeholder="Enter destination"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="deliveryRider">Assigned Rider</label>
+                    <select id="deliveryRider" required>
+                        <option value="">Select a rider</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="deliveryStatus">Delivery Status</label>
+                    <select id="deliveryStatus" required>
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="deliveryAmount">Delivery Amount (₦)</label>
+                    <input
+                        type="number"
+                        id="deliveryAmount"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter delivery amount"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Save Delivery</button>
+
+            </form>
+
+            <h3 class="subheading">Delivery Records</h3>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Reference</th>
+                            <th>Destination</th>
+                            <th>Rider</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="deliveriesTableBody">
+                        <tr>
+                            <td colspan="5">No deliveries recorded yet.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 8. VIEW EARNINGS POP-UP -->
+    <div class="modal" id="earningsModal" aria-hidden="true">
+
+        <div
+            class="modal-content modal-wide"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="earningsTitle"
+        >
+
+            <button
+                type="button"
+                class="close-modal"
+                data-close
+                aria-label="Close earnings"
+            >&times;</button>
+
+            <div class="modal-heading">
+
+                <h2 id="earningsTitle">Fleet Earnings</h2>
+
+                <p>
+                    Review recorded earnings from completed
+                    deliveries.
+                </p>
+
+            </div>
+
+            <div class="earnings-summary">
+
+                <p>Total Recorded Earnings</p>
+
+                <h3 id="earningsTotal">₦0</h3>
+
+            </div>
+
+            <h3 class="subheading">Earnings Records</h3>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Delivery Reference</th>
+                            <th>Destination</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="earningsTableBody">
+                        <tr>
+                            <td colspan="3">
+                                No completed deliveries recorded yet.
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="notice">
+                Earnings shown here are calculated from delivery
+                records marked as completed. They do not represent
+                verified bank balances or actual payment processing.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="../index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="how-it-works.html">How It Works</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- GORIDE SERVICES -->
+            <div class="footer-column">
+
+                <h3>Services</h3>
+
+                <a href="delivery-services.html">
+                    Delivery Services
+                </a>
+
+                <a href="rider-services.html">
+                    Rider Services
+                </a>
+
+                <a href="fleet-services.html">
+                    Fleet Services
+                </a>
+
+                <a href="business-services.html">
+                    Business Services
+                </a>
+
+                <a href="support-services.html">
+                    Support &amp; Account
+                </a>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+            <div class="footer-column">
+
+                <h3>Account</h3>
+
+                <a href="register.html">Register</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="send-package.html">Send a Package</a>
+
+                <a href="track-delivery.html">Track Delivery</a>
+
+                <a href="delivery-history.html">Delivery History</a>
+
+            </div>
+
+
+            <!-- LEGAL -->
+            <div class="footer-column">
+
+                <h3>Legal</h3>
+
+                <a href="terms.html">Terms &amp; Conditions</a>
+
+                <a href="privacy.html">Privacy Policy</a>
+
+                <a href="cookies.html">Cookies</a>
+
+                <a href="security.html">Security</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>© 2026 GoRide. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/fleet-services.js"></script>
+
+</body>
+
+</html>

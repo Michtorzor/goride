@@ -1,0 +1,943 @@
+```css
+/* ===============================
+   GENERAL RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #092d49;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    color: #173b57;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #00b978;
+}
+
+
+/* Header Buttons */
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-btn {
+    color: #092d49;
+    border: 1px solid #092d49;
+}
+
+.register-btn {
+    color: #ffffff;
+    background: #00b978;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+    color: #ffffff;
+    background: #173b57;
+}
+ 
+
+/* Back Button */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+    background-color: #092d49;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #092d49;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #00b978;
+    border-color: #00b978;
+    color: #ffffff;
+}
+
+/* Keep header buttons aligned */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Mobile Menu */
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: #092d49;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.page-hero {
+    background:
+        linear-gradient(
+            rgba(6, 47, 71, 0.92),
+            rgba(6, 47, 71, 0.92)
+        ),
+        url("../assets/background.jpeg") center/cover;
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-label,
+.section-label {
+    color: #00d98b;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 15px 0 20px;
+}
+
+.hero-content h1 span {
+    color: #00d98b;
+}
+
+.hero-content p {
+    color: #e4edf2;
+    max-width: 700px;
+    margin: auto;
+    font-size: 20px;
+}
+
+
+/* ===============================
+   CONTAINER
+================================ */
+
+.section-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* ===============================
+   TRACKING PAGE
+================================ */
+
+.tracking-page {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+
+/* ===============================
+   TRACKING SEARCH
+================================ */
+
+.tracking-search {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 12px 0 15px;
+}
+
+.section-heading > p:last-child {
+    color: #5e707b;
+    font-size: 17px;
+}
+
+
+/* Search Form */
+
+.tracking-form {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+
+    background: #f7fafb;
+    border: 1px solid #e3eaee;
+
+    padding: 25px;
+    border-radius: 16px;
+}
+
+.tracking-input-group {
+    flex: 1;
+    text-align: left;
+}
+
+.tracking-input-group label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #092d49;
+}
+
+.tracking-input-group input {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #d5e0e6;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+.tracking-input-group input:focus {
+    border-color: #00b978;
+    box-shadow: 0 0 0 3px rgba(0, 185, 120, 0.1);
+}
+
+.tracking-hint {
+    margin-top: 15px;
+    color: #667680;
+    font-size: 14px;
+}
+
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    color: #ffffff;
+    background: #00b978;
+    border: 1px solid #00b978;
+}
+
+.primary-btn:hover {
+    background: #092d49;
+    border-color: #092d49;
+    color: #ffffff;
+}
+
+.secondary-btn {
+    color: #092d49;
+    background: #ffffff;
+    border: 1px solid #092d49;
+}
+
+.secondary-btn:hover {
+    background: #00b978;
+    border-color: #00b978;
+    color: #ffffff;
+}
+
+
+/* ===============================
+   DELIVERY RESULT
+================================ */
+
+.delivery-result {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+}
+
+
+/* Main Tracking Card */
+
+.tracking-card {
+    background: #ffffff;
+
+    border: 1px solid #e1e9ed;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(9, 45, 73, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* Tracking Header */
+
+.tracking-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background: #092d49;
+    color: #ffffff;
+}
+
+.tracking-label {
+    color: #00d98b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tracking-header h2 {
+    margin-top: 5px;
+    font-size: 27px;
+}
+
+
+/* Status */
+
+.status-badge {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border-radius: 30px;
+
+    background: #00b978;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* ===============================
+   TRACKING SECTIONS
+================================ */
+
+.tracking-section {
+    padding: 30px;
+
+    border-bottom: 1px solid #e5ecef;
+}
+
+.tracking-section h3 {
+    margin-bottom: 22px;
+
+    font-size: 24px;
+    color: #092d49;
+}
+
+.tracking-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tracking-item {
+    padding: 18px;
+
+    background: #f7fafb;
+
+    border: 1px solid #e5ecef;
+
+    border-radius: 12px;
+}
+
+.tracking-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #667680;
+
+    font-size: 13px;
+}
+
+.tracking-item strong {
+    color: #092d49;
+
+    font-size: 16px;
+}
+
+
+/* Package Description */
+
+.package-description {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #f7fafb;
+
+    border-radius: 12px;
+}
+
+.package-description span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #667680;
+
+    font-size: 13px;
+}
+
+.package-description p {
+    color: #092d49;
+}
+
+
+/* ===============================
+   RIDER SECTION
+================================ */
+
+.rider-section {
+    border-bottom: none;
+}
+
+.rider-card {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    background: #f2f7f8;
+
+    border-radius: 14px;
+}
+
+.rider-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #00b978;
+
+    font-size: 30px;
+}
+
+.rider-details h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.rider-details p {
+    color: #5e707b;
+    font-size: 14px;
+}
+
+
+/* Arrival */
+
+.arrival-message {
+    margin: 0 30px 30px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background: #e9fff6;
+
+    color: #087a53;
+
+    border: 1px solid #b9f1dc;
+}
+
+
+/* ===============================
+   ERROR / MESSAGE
+================================ */
+
+.tracking-message {
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: #f7fafb;
+
+    border: 1px solid #e3eaee;
+}
+
+.tracking-message h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.tracking-message p {
+    color: #667680;
+    margin-bottom: 8px;
+}
+
+.tracking-message.error {
+    border-color: #f0d5d5;
+}
+
+
+/* ===============================
+   QUICK ACTIONS
+================================ */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.quick-card {
+    padding: 30px;
+
+    background: #f7fafb;
+
+    border: 1px solid #e3eaee;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.quick-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(9, 45, 73, 0.1);
+}
+
+.quick-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.quick-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 21px;
+}
+
+.quick-card p {
+    color: #667680;
+
+    margin-bottom: 20px;
+}
+
+
+/* ===============================
+   CTA
+================================ */
+
+.cta-section {
+    background:
+        linear-gradient(
+            rgba(6, 47, 71, 0.92),
+            rgba(6, 47, 71, 0.92)
+        ),
+        url("../assets/background.jpeg") center/cover;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 0;
+}
+
+.cta-section h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.cta-section p {
+    color: #dce8ee;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* ========================================
+   GORIDE FOOTER - CENTERED
+======================================== */
+
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 35px 5% 0;
+    background-color: #062f47;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.footer * {
+    box-sizing: border-box;
+}
+
+/* Center footer links */
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 25px;
+}
+
+.footer-links a {
+    color: #d5e0e7;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00d98b;
+}
+
+/* Copyright container */
+
+.footer > .section-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-width divider and centered copyright */
+
+.copyright {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 20px 10px;
+    color: #d5e0e7;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.copyright::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 30px;
+    }
+
+    .footer-links {
+        gap: 12px 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 25px 5% 0;
+    }
+
+    .footer-container {
+        padding-bottom: 22px;
+    }
+
+    .footer-links {
+        gap: 10px 16px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .copyright {
+        padding: 17px 5px;
+        font-size: 11px;
+    }
+}
+
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    .navbar,
+    .nav-buttons {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar.mobile-open {
+        display: flex;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: #ffffff;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .tracking-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tracking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .logo img {
+        width: 150px;
+        height: 55px;
+    }
+
+    .page-hero {
+        min-height: 380px;
+    }
+
+    .hero-label,
+    .section-label {
+        font-size: 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .tracking-page {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .tracking-form {
+        padding: 20px;
+    }
+
+    .tracking-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tracking-header h2 {
+        font-size: 22px;
+    }
+
+    .tracking-section {
+        padding: 22px;
+    }
+
+    .tracking-section h3 {
+        font-size: 21px;
+    }
+
+    .rider-card {
+        align-items: flex-start;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section h2 {
+        font-size: 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}

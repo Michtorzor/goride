@@ -1,0 +1,459 @@
+
+/* =========================================
+   GORIDE REGISTER PAGE
+========================================= */
+
+:root {
+    --navy: #092d49;
+    --navy-light: #173b57;
+    --green: #00b978;
+    --green-dark: #009b65;
+    --white: #ffffff;
+    --text: #25384a;
+    --muted: #5b6b76;
+    --border: #e6edf1;
+    --background: #f4f7fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+}
+
+/* =========================================
+   BACK TO HOME
+========================================= */
+
+.back-home {
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: var(--navy);
+    background: var(--white);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    color: var(--white);
+    background: var(--green);
+}
+
+/* =========================================
+   PAGE BACKGROUND
+========================================= */
+
+.auth-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 45px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.auth-background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+        url("../assets/background.jpeg")
+        center / cover no-repeat;
+}
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: rgba(9, 45, 73, 0.78);
+}
+
+/* =========================================
+   AUTHENTICATION CONTAINER
+========================================= */
+
+.auth-container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+.auth-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-logo {
+    display: inline-block;
+}
+
+.register-logo img {
+    display: block;
+    width: 190px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* =========================================
+   REGISTER BOX
+========================================= */
+
+.auth-box {
+    position: relative;
+    width: 100%;
+    padding: 35px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+.register-box {
+    max-height: 82vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--green) #edf2f5;
+}
+
+.register-box::-webkit-scrollbar {
+    width: 7px;
+}
+
+.register-box::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 10px;
+}
+
+.register-box::-webkit-scrollbar-track {
+    background: #edf2f5;
+}
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #f0f4f6;
+    color: var(--navy);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.close-btn:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* =========================================
+   REGISTER HEADING
+========================================= */
+
+.auth-heading {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.heading-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    background: #e5f8f0;
+    color: var(--green-dark);
+    border-radius: 50%;
+    font-size: 23px;
+}
+
+.auth-heading h2 {
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.auth-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   FIVE MAJOR SERVICES HEADING
+========================================= */
+
+.register-services-heading {
+    text-align: center;
+    margin: 25px 0 18px;
+}
+
+.register-services-heading h3 {
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.register-services-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   REGISTER OPTIONS
+========================================= */
+
+.register-options {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.register-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--white);
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.register-option:hover {
+    transform: translateY(-3px);
+    border-color: var(--green);
+    box-shadow: 0 7px 20px rgba(9, 45, 73, 0.08);
+}
+
+.option-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 21px;
+}
+
+.package-icon {
+    color: #0878bd;
+    background: #e8f4ff;
+}
+
+.rider-icon {
+    color: #009b65;
+    background: #e5f8f0;
+}
+
+.fleet-icon {
+    color: #8b5ac2;
+    background: #f1eaff;
+}
+
+.business-icon {
+    color: #c47b13;
+    background: #fff4df;
+}
+
+.support-icon {
+    color: #0878bd;
+    background: #e8f4ff;
+}
+
+.option-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.option-text h3 {
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.option-text p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.arrow {
+    flex-shrink: 0;
+    color: var(--green-dark);
+    font-size: 14px;
+    transition: transform 0.25s ease;
+}
+
+.register-option:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   LOGIN PROMPT
+========================================= */
+
+.login-prompt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    text-align: center;
+}
+
+.login-prompt span {
+    color: var(--muted);
+}
+
+.login-prompt a {
+    color: var(--green-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    color: var(--navy);
+    text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+    .auth-page {
+        padding: 75px 14px 25px;
+        align-items: flex-start;
+    }
+
+    .back-home {
+        top: 12px;
+        left: 12px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .auth-container {
+        max-width: 100%;
+    }
+
+    .register-logo img {
+        width: 160px;
+        height: 60px;
+    }
+
+    .auth-box {
+        padding: 27px 17px;
+        border-radius: 12px;
+    }
+
+    .register-box {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .auth-heading h2 {
+        font-size: 21px;
+    }
+
+    .auth-heading p {
+        font-size: 12px;
+    }
+
+    .register-services-heading h3 {
+        font-size: 18px;
+    }
+
+    .register-services-heading p {
+        font-size: 12px;
+    }
+
+    .register-option {
+        gap: 11px;
+        padding: 13px 11px;
+    }
+
+    .option-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .option-text h3 {
+        font-size: 13px;
+    }
+
+    .option-text p {
+        font-size: 11px;
+    }
+
+    .arrow {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .register-option {
+        gap: 8px;
+        padding: 11px 8px;
+    }
+
+    .option-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .option-text h3 {
+        font-size: 12px;
+    }
+
+    .option-text p {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,765 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    min-height: 100vh;
+
+    background: url(../assets/background.jpeg);
+
+    color: #092d49;
+}
+
+
+/* =========================================================
+   BACK TO REGISTER
+   ========================================================= */
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: min(1200px, 92%);
+    min-height: 78px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* GoRide Logo */
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo img {
+    width: 125px;
+    height: auto;
+    display: block;
+}
+
+/* Header Navigation */
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+/* Return to Registration */
+
+.return-btn {
+    background: #eefbf6;
+    color: #00b978;
+    border: 1px solid #c9f1e1;
+}
+
+.return-btn:hover {
+    background: #00b978;
+    color: #ffffff;
+}
+
+/* Home */
+
+.home-btn {
+    background: #092d49;
+    color: #ffffff;
+    border: 1px solid #092d49;
+}
+
+.home-btn:hover {
+    background: #173b57;
+}
+
+
+/* =========================================
+   MOBILE HEADER
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header-container {
+        min-height: 70px;
+    }
+
+    .header-logo img {
+        width: 105px;
+    }
+
+    .header-nav {
+        gap: 7px;
+    }
+
+    .header-btn {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .header-btn span {
+        display: none;
+    }
+
+    .header-btn i {
+        font-size: 15px;
+    }
+}
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.rider-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 80px 20px 40px;
+}
+
+
+/* =========================================================
+   RIDER FORM BOX
+   ========================================================= */
+
+.auth-box {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    animation: formAppear 0.5s ease;
+}
+
+
+@keyframes formAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.close-btn {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+
+.close-btn:hover {
+    background: #00b978;
+
+    color: #ffffff;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.auth-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.heading-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(0, 185, 120, 0.12);
+
+    color: #00b978;
+
+    font-size: 25px;
+}
+
+
+.auth-heading h2 {
+    color: #092d49;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.auth-heading p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.form-section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    color: #092d49;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.form-section-title i {
+    color: #00b978;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   FORM ROW
+   ========================================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+   ========================================================= */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUT FIELD
+   ========================================================= */
+
+.input-field {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.input-field > i {
+    position: absolute;
+
+    left: 15px;
+
+    color: #94a3b8;
+
+    font-size: 15px;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+}
+
+
+.input-field input,
+.input-field select {
+    width: 100%;
+
+    height: 48px;
+
+    padding:
+        0 15px 0 43px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+
+.input-field input::placeholder {
+    color: #a0aec0;
+}
+
+
+.input-field input:focus,
+.input-field select:focus {
+    border-color: #00b978;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 185, 120, 0.10);
+}
+
+
+.input-field:focus-within > i {
+    color: #00b978;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.select-field select {
+    appearance: none;
+
+    cursor: pointer;
+}
+
+
+.select-field::after {
+    content: "\f078";
+
+    position: absolute;
+
+    right: 15px;
+
+    color: #94a3b8;
+
+    font-family:
+        "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    font-size: 11px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.checkbox-label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    margin-bottom: 20px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+
+.checkbox-label input {
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    accent-color: #00b978;
+
+    cursor: pointer;
+}
+
+
+.checkbox-label a {
+    color: #00b978;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+
+    color: #008f62;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.primary-btn {
+    width: 100%;
+
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #00b978;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.primary-btn:hover {
+    background: #008f62;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 185, 120, 0.20);
+}
+
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.input-error {
+    border-color: #ef4444 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(239, 68, 68, 0.08) !important;
+}
+
+
+.input-success {
+    border-color: #00b978 !important;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.application-success {
+    margin-top: 20px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background: #f0fff9;
+
+    border: 1px solid #b7f0d8;
+
+    text-align: center;
+}
+
+
+.application-success .success-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #00b978;
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+
+.application-success h3 {
+    color: #092d49;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.application-success p {
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .rider-page {
+        padding: 75px 18px 30px;
+    }
+
+
+    .auth-box {
+        padding: 35px 28px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .auth-heading h2 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .back-register {
+        top: 12px;
+
+        left: 12px;
+
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .rider-page {
+        padding: 70px 12px 25px;
+    }
+
+
+    .auth-box {
+        padding: 32px 18px 25px;
+
+        border-radius: 15px;
+    }
+
+
+    .close-btn {
+        top: 12px;
+
+        right: 12px;
+
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .heading-icon {
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 21px;
+    }
+
+
+    .auth-heading {
+        margin-bottom: 20px;
+    }
+
+
+    .auth-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .auth-heading p {
+        font-size: 12px;
+    }
+
+
+    .form-section-title {
+        font-size: 14px;
+    }
+
+
+    .checkbox-label {
+        font-size: 11px;
+    }
+
+}

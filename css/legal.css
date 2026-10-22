@@ -1,0 +1,549 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   ROOT COLORS
+========================================= */
+
+:root {
+    --navy: #092d49;
+    --navy-light: #173b57;
+    --green: #00b978;
+    --green-bright: #00d98b;
+    --white: #ffffff;
+    --background: #f5f9fb;
+    --card-background: #f7fafb;
+    --border: #e6edf1;
+    --text: #173b57;
+    --muted: #687b89;
+    --footer: #062f47;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: url(../assets/background.jpeg);
+    color: var(--navy-light);
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+   Same structure and appearance as terms.css
+========================================= */
+
+.privacy-header {
+    width: 100%;
+    min-height: 75px;
+    padding: 0 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--white);
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    box-shadow: 0 2px 10px rgba(9, 45, 73, 0.08);
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.privacy-header .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.privacy-header .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.privacy-header .logo img {
+    display: block;
+    width: 200px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.privacy-header .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+
+.privacy-header .navbar a {
+    color: #173b57;
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.privacy-header .navbar a:hover,
+.privacy-header .navbar a.active {
+    color: var(--green);
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.privacy-header .menu-btn {
+    display: none;
+
+    padding: 5px;
+
+    background: transparent;
+    border: none;
+
+    color: var(--navy);
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.legal-container {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 50px auto 70px;
+}
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.legal-hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.legal-hero span {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.legal-hero h1 {
+    margin-bottom: 10px;
+
+    color: var(--navy);
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.legal-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   CONTENT CARD
+========================================= */
+
+.legal-card {
+    width: 100%;
+    padding: 45px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(9, 45, 73, 0.06);
+}
+
+/* =========================================
+   LAST UPDATED
+========================================= */
+
+.updated {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+
+    color: #00a96b;
+    font-size: 13px;
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--border);
+}
+
+/* =========================================
+   CONTENT HEADINGS
+========================================= */
+
+.legal-card h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.legal-card h2:first-of-type {
+    margin-top: 0;
+}
+
+.legal-card h3 {
+    margin-top: 22px;
+    margin-bottom: 10px;
+
+    color: var(--navy-light);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* =========================================
+   PARAGRAPHS
+========================================= */
+
+.legal-card p {
+    margin-bottom: 16px;
+
+    color: #526575;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   LISTS
+========================================= */
+
+.legal-card ul,
+.legal-card ol {
+    margin: 0 0 20px 25px;
+    padding-left: 5px;
+
+    color: #526575;
+}
+
+.legal-card li {
+    margin-bottom: 8px;
+    padding-left: 4px;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.legal-card li::marker {
+    color: var(--green);
+}
+
+/* =========================================
+   LINKS INSIDE CONTENT
+========================================= */
+
+.legal-card a {
+    color: var(--green);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.legal-card a:hover {
+    color: var(--navy);
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.legal-footer {
+    width: 100%;
+    margin: 70px 0 0;
+    padding: 50px 0 0;
+    background: var(--footer);
+    color: var(--white);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.legal-footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    padding: 0 5% 25px;
+}
+
+.legal-footer .footer-links a {
+    color: var(--green-bright);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-footer .footer-links a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Full-width divider and centered copyright */
+
+.legal-footer-bottom {
+    width: 100%;
+    margin: 0;
+    padding: 20px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.legal-footer-bottom .legal-copyright {
+    width: 100%;
+    margin: 0;
+    color: #aebfc8;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Mobile footer */
+
+@media (max-width: 768px) {
+    .legal-footer {
+        margin-top: 45px;
+        padding-top: 40px;
+    }
+
+    .legal-footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 25px;
+    }
+
+    .legal-footer-bottom {
+        padding: 18px 5%;
+    }
+
+    .legal-footer-bottom .legal-copyright {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   TABLES
+========================================= */
+
+.legal-card table {
+    width: 100%;
+    margin: 20px 0;
+
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.legal-card th,
+.legal-card td {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+
+    text-align: left;
+    font-size: 14px;
+}
+
+.legal-card th {
+    background: var(--background);
+    color: var(--navy);
+    font-weight: 700;
+}
+
+/* =========================================
+   TABLET NAVIGATION
+========================================= */
+
+@media (max-width: 1000px) {
+    .privacy-header {
+        padding: 0 4%;
+    }
+
+    .privacy-header .navbar {
+        gap: 16px;
+    }
+
+    .privacy-header .navbar a {
+        font-size: 15px;
+    }
+
+    .privacy-header .logo img {
+        width: 170px;
+        height: 60px;
+    }
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 900px) {
+    .privacy-header {
+        min-height: 75px;
+        padding: 5px 5%;
+    }
+
+    .privacy-header .menu-btn {
+        display: block;
+    }
+
+    .privacy-header .navbar {
+        display: none;
+
+        position: absolute;
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+        padding: 10px 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        background: #ffffff;
+        box-shadow: 0 8px 15px rgba(9, 45, 73, 0.08);
+    }
+
+    .privacy-header .navbar.active {
+        display: flex;
+    }
+
+    .privacy-header .navbar a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   MOBILE CONTENT
+========================================= */
+
+@media (max-width: 768px) {
+    .legal-container {
+        width: 92%;
+        margin: 35px auto 45px;
+    }
+
+    .legal-hero h1 {
+        font-size: 30px;
+    }
+
+    .legal-hero p {
+        font-size: 14px;
+    }
+
+    .legal-card {
+        padding: 28px 22px;
+    }
+
+    .legal-card h2 {
+        font-size: 18px;
+    }
+
+    .legal-card p,
+    .legal-card li {
+        font-size: 14px;
+    }
+
+    .legal-footer {
+        margin-top: 45px;
+        padding: 40px 5% 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+    .privacy-header .logo img {
+        width: 170px;
+        height: 60px;
+    }
+
+    .legal-hero h1 {
+        font-size: 26px;
+    }
+
+    .legal-card {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .privacy-header {
+        padding: 5px 4%;
+    }
+
+    .privacy-header .logo img {
+        width: 150px;
+        height: 55px;
+    }
+
+    .legal-hero h1 {
+        font-size: 25px;
+    }
+
+    .legal-card {
+        padding: 22px 17px;
+    }
+}

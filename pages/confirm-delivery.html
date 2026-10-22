@@ -1,0 +1,352 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Confirm Delivery | GoRide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/confirm-delivery.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.jpeg" alt="GoRide Logo">
+            </a>
+
+            <nav class="navbar">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+
+        <div class="hero-content">
+
+            <p class="hero-label">DELIVERY CONFIRMATION</p>
+
+            <h1>
+                Review Your <span>Delivery</span>
+            </h1>
+
+            <p>
+                Check your delivery details and confirm your request with GoRide.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONFIRMATION SECTION -->
+    <main class="confirmation-section">
+
+        <div class="section-container">
+
+            <div class="confirmation-grid">
+
+                <!-- DELIVERY DETAILS -->
+                <div class="confirmation-card">
+
+                    <div class="card-heading">
+                        <span>📦</span>
+
+                        <div>
+                            <h2>Delivery Details</h2>
+                            <p>Review your package information</p>
+                        </div>
+                    </div>
+
+
+                    <div class="details-list">
+
+                        <div class="detail-item">
+                            <span>Delivery Type</span>
+                            <strong id="confirmType">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Delivery Time</span>
+                            <strong id="confirmTiming">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Pickup Location</span>
+                            <strong id="confirmPickup">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Delivery Location</span>
+                            <strong id="confirmDestination">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Package</span>
+                            <strong id="confirmPackage">-</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CUSTOMER DETAILS -->
+                <div class="confirmation-card">
+
+                    <div class="card-heading">
+                        <span>👤</span>
+
+                        <div>
+                            <h2>Customer Details</h2>
+                            <p>Information connected to this delivery</p>
+                        </div>
+                    </div>
+
+
+                    <div class="details-list">
+
+                        <div class="detail-item">
+                            <span>Sender</span>
+                            <strong id="confirmSender">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Phone</span>
+                            <strong id="confirmPhone">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Receiver</span>
+                            <strong id="confirmReceiver">-</strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Receiver Phone</span>
+                            <strong id="confirmReceiverPhone">-</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FARE -->
+            <div class="fare-card">
+
+                <div class="fare-heading">
+
+                    <div>
+                        <p class="section-label">DELIVERY FARE</p>
+                        <h2>Estimated Delivery Cost</h2>
+                    </div>
+
+                    <div class="fare-amount" id="confirmFare">
+                        ₦0
+                    </div>
+
+                </div>
+
+                <p class="fare-note">
+                    This is an estimated delivery fare. The final amount may vary
+                    depending on the actual delivery distance and other applicable charges.
+                </p>
+
+            </div>
+
+
+            <!-- CONFIRMATION MESSAGE -->
+            <div class="confirmation-message">
+
+                <div class="message-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h2>Ready to Confirm?</h2>
+
+                    <p>
+                        By confirming this delivery, you agree to provide accurate
+                        pickup, delivery and package information to GoRide.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="confirmation-actions">
+
+                <a href="send-package.html" class="secondary-btn">
+                    ← Edit Delivery
+                </a>
+
+                <button id="confirmDeliveryBtn" class="primary-btn">
+                    Confirm Delivery
+                </button>
+
+            </div>
+
+
+            <!-- SUCCESS MESSAGE -->
+            <div class="success-card" id="successCard">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h2>Delivery Confirmed!</h2>
+
+                <p>
+                    Your delivery request has been successfully created.
+                </p>
+
+                <div class="tracking-box">
+
+                    <p>Your Tracking Number</p>
+
+                    <strong id="trackingNumber">
+                        GR-2026-000000
+                    </strong>
+
+                </div>
+
+                <p class="success-note">
+                    Keep this tracking number safe. You can use it to track
+                    your delivery.
+                </p>
+
+                <div class="success-actions">
+
+                    <a href="track-delivery.html" class="primary-btn">
+                        Track Delivery
+                    </a>
+
+                    <a href="delivery-services.html" class="secondary-btn">
+                        Back to Delivery Services
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- CTA -->
+    <section class="cta-section">
+
+        <div class="section-container">
+
+            <h2>Need More From GoRide?</h2>
+
+            <p>
+                Explore our delivery, rider and fleet services.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="services.html" class="primary-btn">
+                    Explore Services
+                </a>
+
+                <a href="register.html" class="secondary-btn">
+                    Create an Account
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.jpeg" alt="GoRide Logo">
+                </a>
+
+                <p>
+                    Fast, safe and reliable delivery services with GoRide.
+                </p>
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <div class="footer-links">
+
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="delivery-services.html">Delivery Services</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="register.html">Register</a>
+                    <a href="login.html">Login</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section-container">
+
+            <div class="copyright">
+                © 2026 GoRide. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/confirm-delivery.js"></script>
+
+</body>
+</html>
+```

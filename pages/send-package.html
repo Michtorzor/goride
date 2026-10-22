@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>GoRide - Send a Package</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"href="../css/send-package.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-container">
+
+        <a href="../index.html" class="header-logo">
+            <img src="../assets/logo.jpeg" alt="GoRide Logo">
+        </a>
+
+        <nav class="header-nav" id="navbar">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+            <a href="javascript:history.back()" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back</span>
+            </a>
+        </div>
+
+        <button
+            type="button"
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Toggle navigation"
+            aria-controls="navbar"
+            aria-expanded="false"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+    <!-- ============================= -->
+    <!-- MAIN -->
+    <!-- ============================= -->
+
+    <main class="package-page">
+
+
+        <section
+            class="auth-box form-box"
+            id="packageForm"
+        >
+
+            <!-- ============================= -->
+            <!-- HEADING -->
+            <!-- ============================= -->
+
+            <div class="auth-heading">
+
+
+                <span class="heading-icon">
+
+                    <i class="fa-solid fa-box"></i>
+
+                </span>
+
+
+                <h2>
+                    Request a Delivery
+                </h2>
+
+
+                <p>
+                    Tell GoRide what you want to deliver
+                    and where you want it delivered.
+                </p>
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- PACKAGE FORM -->
+            <!-- ============================= -->
+
+            <form id="packageFormElement">
+
+
+                <!-- ============================= -->
+                <!-- DELIVERY REQUEST -->
+                <!-- ============================= -->
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    Delivery Request
+
+                </div>
+
+
+                <!-- REQUEST TYPE -->
+
+                <div class="input-group">
+
+                    <label for="requestType">
+                        What would you like to deliver?
+                    </label>
+
+
+                    <div class="input-field">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+
+                        <select
+                            id="requestType"
+                            required
+                        >
+
+                            <option value="">
+                                Select delivery type
+                            </option>
+
+                            <option value="food">
+                                Food & Grocery
+                            </option>
+
+                            <option value="document">
+                                Documents
+                            </option>
+
+                            <option value="parcel">
+                                Parcels & Packages
+                            </option>
+
+                            <option value="ecommerce">
+                                E-commerce Orders
+                            </option>
+
+                            <option value="pharmacy">
+                                Pharmacy Items
+                            </option>
+
+                            <option value="bulk">
+                                Bulk Delivery
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- DELIVERY TIMING -->
+                <div class="input-group">
+                    <label>
+                        When do you want it delivered?
+                    </label>
+                    <div class="delivery-options">
+                        <label class="delivery-option">
+                            <input
+                                type="radio"
+                                name="deliveryTiming"
+                                value="now"
+                                checked
+                            >
+                            <span>
+                                <i class="fa-solid fa-bolt"></i>
+                                Deliver Now
+                            </span>
+                        </label>
+
+                        <label class="delivery-option">
+                            <input
+                                type="radio"
+                                name="deliveryTiming"
+                                value="schedule"
+                            >
+                            <span>
+                                <i class="fa-solid fa-calendar-days"></i>
+                                Schedule Delivery
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- SCHEDULE FIELDS -->
+                <div
+                    class="schedule-fields"
+                    id="scheduleFields"
+                    style="display: none;"
+                >
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="deliveryDate">
+                                Delivery Date
+                            </label>
+                            <div class="input-field">
+                                <i class="fa-solid fa-calendar"></i>
+                                <input
+                                    type="date"
+                                    id="deliveryDate"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="deliveryTime">
+                                Preferred Time
+                            </label>
+                            <div class="input-field">
+                                <i class="fa-solid fa-clock"></i>
+
+                                <input
+                                    type="time"
+                                    id="deliveryTime"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- SENDER INFORMATION -->
+                <!-- ============================= -->
+                <div class="form-section-title">
+                    <i class="fa-solid fa-user"></i>
+                    Sender Information
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="packageName">
+                            Sender's Full Name
+                        </label>
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="packageName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="packagePhone">
+                            Sender's Phone Number
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="packagePhone"
+                                placeholder="0801 234 5678"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label for="packageEmail">
+                        Sender's Email Address
+                    </label>
+
+                    <div class="input-field">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="packageEmail"
+                            placeholder="example@email.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- RECEIVER INFORMATION -->
+                <!-- ============================= -->
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                    Receiver Information
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <div class="input-group">
+
+                        <label for="receiverName">
+                            Receiver's Full Name
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="receiverName"
+                                placeholder="Enter receiver's full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="receiverPhone">
+                            Receiver's Phone Number
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="receiverPhone"
+                                placeholder="0801 234 5678"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- DELIVERY LOCATIONS -->
+                <!-- ============================= -->
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    Delivery Locations
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <div class="input-group">
+
+                        <label for="pickupLocation">
+                            Pickup Location
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input
+                                type="text"
+                                id="pickupLocation"
+                                placeholder="Where should we pick it up?"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="deliveryLocation">
+                            Delivery Location
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-location-crosshairs"></i>
+
+                            <input
+                                type="text"
+                                id="deliveryLocation"
+                                placeholder="Where should we deliver?"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- PACKAGE DETAILS -->
+                <!-- ============================= -->
+
+                <div class="form-section-title">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    Package Details
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <!-- PACKAGE SIZE -->
+
+                    <div class="input-group">
+
+                        <label for="packageType">
+                            Package Type
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-box"></i>
+
+                            <select
+                                id="packageType"
+                                required
+                            >
+
+                                <option value="">
+                                    Select package type
+                                </option>
+
+                                <option value="Document">
+                                    Document
+                                </option>
+
+                                <option value="Small">
+                                    Small Package
+                                </option>
+
+                                <option value="Medium">
+                                    Medium Package
+                                </option>
+
+                                <option value="Large">
+                                    Large Package
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WEIGHT -->
+
+                    <div class="input-group">
+
+                        <label for="packageWeight">
+                            Package Weight (kg)
+                        </label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-weight-hanging"></i>
+
+                            <input
+                                type="number"
+                                id="packageWeight"
+                                min="0.1"
+                                step="0.1"
+                                placeholder="e.g. 2.5"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DELIVERY SPEED -->
+
+                <div class="input-group">
+
+                    <label for="deliverySpeed">
+                        Delivery Speed
+                    </label>
+
+                    <div class="input-field">
+
+                        <i class="fa-solid fa-gauge-high"></i>
+
+                        <select
+                            id="deliverySpeed"
+                            required
+                        >
+
+                            <option value="">
+                                Select delivery speed
+                            </option>
+
+                            <option value="standard">
+                                Standard Delivery
+                            </option>
+
+                            <option value="express">
+                                Express Delivery
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="input-group">
+
+                    <label for="packageDescription">
+                        Package Description
+                    </label>
+
+                    <textarea
+                        id="packageDescription"
+                        placeholder="Describe what you are sending..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- PACKAGE PHOTO -->
+                <!-- ============================= -->
+
+                <div class="input-group">
+
+                    <label for="packagePhoto">
+                        Package Photo
+                    </label>
+
+
+                    <div class="file-upload">
+
+                        <i class="fa-solid fa-camera"></i>
+
+
+                        <span id="fileUploadText">
+                            Upload or take a picture
+                            of your package
+                        </span>
+
+
+                        <input
+                            type="file"
+                            id="packagePhoto"
+                            accept="image/*"
+                            capture="environment"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- FARE PREVIEW -->
+                <!-- ============================= -->
+
+                <div
+                    class="fare-preview"
+                    id="farePreview"
+                >
+
+                    <div class="fare-icon">
+
+                        <i class="fa-solid fa-motorcycle"></i>
+
+                    </div>
+
+
+                    <div class="fare-content">
+
+                        <span>
+                            Estimated Delivery Fare
+                        </span>
+
+
+                        <strong id="estimatedFare">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- CONTINUE -->
+                <!-- ============================= -->
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                    id="continueDeliveryBtn"
+                >
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    Continue to Delivery
+
+                </button>
+
+
+            </form>
+
+
+            <!-- ============================= -->
+            <!-- DELIVERY SUMMARY -->
+            <!-- ============================= -->
+
+            <div
+                class="delivery-summary"
+                id="deliverySummary"
+                style="display: none;"
+            >
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <h3>
+                    Delivery Request Ready
+                </h3>
+
+
+                <p>
+                    Review your delivery request before
+                    continuing to registration or payment.
+                </p>
+
+
+                <div class="summary-details">
+
+                    <p>
+                        <strong>Request Type:</strong>
+
+                        <span id="summaryType"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Delivery:</strong>
+
+                        <span id="summaryTiming"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Pickup:</strong>
+
+                        <span id="summaryPickup"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Destination:</strong>
+
+                        <span id="summaryDestination"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Package:</strong>
+
+                        <span id="summaryPackage"></span>
+                    </p>
+
+
+                    <p>
+                        <strong>Estimated Fare:</strong>
+
+                        <span id="summaryFare"></span>
+                    </p>
+
+                </div>
+
+
+                <div class="summary-buttons">
+
+                    <a
+                        href="register.html"
+                        class="primary-btn"
+                    >
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Continue to Registration
+
+                    </a>
+
+
+                    <a
+                        href="fare-calculator.html"
+                        class="secondary-btn"
+                    >
+                        <i class="fa-solid fa-calculator"></i>
+
+                        Check Fare
+
+                    </a>
+
+
+                    <a
+                        href="delivery-services.html"
+                        class="back-link"
+                    >
+                        ← Back to Delivery Services
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 GoRide. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/send-package.js"></script>
+
+</body>
+</html>

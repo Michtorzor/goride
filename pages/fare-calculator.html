@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Calculate your estimated GoRide delivery fare before sending your package.">
+
+    <title>Fare Calculator | GoRide</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Fare Calculator CSS -->
+    <link rel="stylesheet" href="../css/fare-calculator.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <!-- LOGO -->
+            <a href="../index.html" class="logo" aria-label="GoRide Home">
+                <img src="../assets/logo.jpeg" alt="GoRide Logo">
+            </a>
+
+            <!-- NAVIGATION -->
+            <nav class="navbar" id="navbar" aria-label="Main navigation">
+
+                <a href="../index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="how-it-works.html">How It Works</a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+            <!-- HEADER BUTTONS -->
+            <div class="header-actions">
+
+               
+        <div class="header-actions">
+            <a href="register.html" class="register-btn">Register</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="javascript:history.back()" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+
+            </div>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button
+                type="button"
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-controls="navbar"
+                aria-expanded="false"
+            >
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="fare-page">
+
+        <!-- INTRODUCTION -->
+        <section class="fare-intro">
+
+            <span class="section-label">
+                FARE CALCULATOR
+            </span>
+
+            <h1>Calculate Your Delivery Fare</h1>
+
+            <p>
+                Get an estimated delivery cost before sending your package.
+                Enter your delivery details below to calculate your fare.
+            </p>
+
+        </section>
+
+
+        <!-- CALCULATOR CONTAINER -->
+        <section class="fare-container" aria-label="Delivery fare calculator">
+
+            <!-- DELIVERY FORM -->
+            <div class="fare-form-card">
+
+                <h2>Delivery Details</h2>
+
+                <p class="form-description">
+                    Tell us about your delivery.
+                </p>
+
+                <form id="fareForm">
+
+                    <!-- PICKUP LOCATION -->
+                    <div class="form-group">
+
+                        <label for="pickup">
+                            Pickup Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pickup"
+                            name="pickup"
+                            placeholder="Enter pickup location"
+                            autocomplete="street-address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- DROP-OFF LOCATION -->
+                    <div class="form-group">
+
+                        <label for="dropoff">
+                            Drop-off Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dropoff"
+                            name="dropoff"
+                            placeholder="Enter delivery location"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PACKAGE TYPE -->
+                    <div class="form-group">
+
+                        <label for="packageType">
+                            Package Type
+                        </label>
+
+                        <select
+                            id="packageType"
+                            name="packageType"
+                            required
+                        >
+
+                            <option value="">Select package type</option>
+                            <option value="document">Document</option>
+                            <option value="small">Small Package</option>
+                            <option value="medium">Medium Package</option>
+                            <option value="large">Large Package</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PACKAGE WEIGHT -->
+                    <div class="form-group">
+
+                        <label for="weight">
+                            Package Weight (kg)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="weight"
+                            name="weight"
+                            min="0.1"
+                            step="0.1"
+                            placeholder="e.g. 2"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- DELIVERY SPEED -->
+                    <div class="form-group">
+
+                        <label>
+                            Delivery Speed
+                        </label>
+
+                        <div class="delivery-options">
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="deliverySpeed"
+                                    value="standard"
+                                    checked
+                                >
+
+                                <div>
+                                    <strong>Standard</strong>
+                                    <span>Regular delivery</span>
+                                </div>
+
+                            </label>
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="deliverySpeed"
+                                    value="express"
+                                >
+
+                                <div>
+                                    <strong>Express</strong>
+                                    <span>Priority delivery</span>
+                                </div>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CALCULATE BUTTON -->
+                    <button
+                        type="submit"
+                        class="calculate-btn"
+                    >
+                        <i class="fas fa-calculator" aria-hidden="true"></i>
+                        Calculate Fare
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- FARE RESULT -->
+            <div class="fare-result-card">
+
+                <div class="result-icon" aria-hidden="true">
+                    ₦
+                </div>
+
+                <h2>Your Estimated Fare</h2>
+
+                <p class="result-description">
+                    Your estimated delivery cost will appear here.
+                </p>
+
+
+                <div id="fareResult" class="fare-result"
+                     aria-live="polite">
+
+                    <div class="fare-row">
+                        <span>Base Fare</span>
+                        <strong id="baseFare">₦0</strong>
+                    </div>
+
+                    <div class="fare-row">
+                        <span>Distance Fee</span>
+                        <strong id="distanceFee">₦0</strong>
+                    </div>
+
+                    <div class="fare-row">
+                        <span>Package Fee</span>
+                        <strong id="packageFee">₦0</strong>
+                    </div>
+
+                    <div class="fare-row">
+                        <span>Delivery Fee</span>
+                        <strong id="deliveryFee">₦0</strong>
+                    </div>
+
+                    <div class="fare-divider"></div>
+
+                    <div class="fare-total">
+                        <span>Estimated Total</span>
+                        <strong id="totalFare">₦0</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- SEND PACKAGE -->
+                <a href="send-package.html" class="send-package-btn">
+                    Proceed to Send Package
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <p class="fare-note">
+                    <i class="fas fa-circle-info" aria-hidden="true"></i>
+                    Demo estimate only. Your final fare may vary depending
+                    on actual distance, package details and delivery
+                    conditions.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <!-- CUSTOMER SUPPORT -->
+            <div class="footer-column">
+                <h3>Customer Support</h3>
+                <a href="delivery-services.html">Delivery Services</a>
+                <a href="send-package.html">Send a Package</a>
+                <a href="customer-support.html">Customer Support</a>
+
+            </div>
+
+            <!-- LEGAL -->
+            <div class="footer-column">
+                <h3>Legal Links</h3>
+                <a href="term.html">Terms &amp; Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="security.html">Security</a>
+                <a href="cookies.html">Cookie Policy</a>
+                 <a href="insurance.html">Insurance</a>
+            </div>
+
+        </div>
+
+
+        <!-- FULL-WIDTH FOOTER DIVIDER -->
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 GoRide. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+    <script src="../js/fare-calculator.js"></script>
+
+</body>
+</html>
